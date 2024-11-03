@@ -2,6 +2,7 @@ import './styles/App.css';
 import Navbar from './components/Navbar';
 import SignUp from './pages/SignUp';
 import SignIn from './pages/SignIn';
+import ResetPassword from './pages/ResetPassword';
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       {/* <Navbar /> */}
       <SignUp />
       <SignIn />
+      <ResetPassword />
     </div>
   );
 }
