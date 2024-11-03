@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../styles/signup.css';
 
 const SignIn = () => {
   const [form, setForm] = useState({
@@ -47,8 +48,13 @@ const SignIn = () => {
               onChange={handleChange}
               required
             />
+            <p className='forgot-password'><a href="/forgot-password">Forgot Password?</a></p>
+
             <button type="submit">Sign In</button>
           </form>
+          <p>
+            Don't have an account? <a href="/signup">Sign Up</a>
+          </p>
         </div>
       </div>
     </div>
