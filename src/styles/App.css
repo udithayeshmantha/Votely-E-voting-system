@@ -2,43 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
 /* SignUp & SignIn Page */
@@ -48,7 +16,8 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background:#2d005f;
+    background-image: url("../assets/bg.jpg");
+    background-size: cover;
     font-family: Arial, sans-serif;
   }
   
@@ -74,10 +43,10 @@
   
   .form {
     width: 100%;
-    max-width: 500px;
+    max-width: 800px;
     flex: 1;
     background-color: #fff;
-    border-radius: 10px;
+    border-radius: 20px;
     padding: 2rem;
     margin-right: 20rem;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
@@ -91,8 +60,18 @@
   
   .form p {
     color: #6b6b6b;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0.3rem;
+    text-align: center;
   }
+
+  .form label {
+    display: block;
+    text-align: left;
+    color: #333;
+    font-weight: bold;
+    margin-top: 1rem;
+}
   
   .form input {
     width: 100%;
@@ -102,6 +81,15 @@
     border-radius: 10px;
   
   }
+  .terms{
+    display: flex;
+    align-items: center;
+}
+
+  .terms input[type="checkbox"] {
+    width: auto;
+    margin-right: 0.5rem;
+}
 
   .form button {
     width: 100%;
@@ -139,7 +127,7 @@
   width: 100%;
   max-width: 500px;
   background-color: #fff;
-  border-radius: 10px;
+  border-radius: 20px;
   padding: 2rem;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
