@@ -8,4 +8,4 @@ const Results = () => {
   )
 }
 
-export default Results
+export default Results;

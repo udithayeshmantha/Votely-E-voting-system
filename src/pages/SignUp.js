@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Logo from '../assets/logo.png';
 
 const SignUp = () => {
   const [form, setForm] = useState({
@@ -24,14 +25,12 @@ const SignUp = () => {
 
   return (
     <div className="main-container">
-      <div className="welcome-section">
-
-        <h3>Welcome to </h3>
-        <h1>Votely</h1>
+      <div className="logo-container">
+        <img src={Logo} alt="" />
       </div>
       <div className="form">
-        <h2>Sign Up</h2>
-        <p>Welcome to Votely's Online Voting System, please register as a voter to vote in your preferred candidate.</p>
+        <h2 className='secondary-heading'>Sign Up</h2>
+        <p className='primary-text'>Welcome to Votely's Online Voting System, please register as a voter to vote in your preferred candidate.</p>
         <form onSubmit={handleSubmit}>
 
         <label for="id_no">Voters ID No.</label>
@@ -62,13 +61,13 @@ const SignUp = () => {
 
           <div className='terms'>
             <input type="checkbox" name="terms" id="" />
-            <p>I agree to Votely's <a href="#">Terms & Conditions</a> & <a href="#">Privacy Policy</a></p>
+            <p className='primary-text'>I agree to Votely's <a href="#">Terms & Conditions</a> & <a href="#">Privacy Policy</a></p>
           </div>
 
-          <button type="submit">Register</button>
+          <button type="submit" className="primary-btn">Register</button>
         </form>
 
-        <p>
+        <p className='primary-text'>
           Already have an account? <a href="/signin">Sign In</a>
         </p>
       </div>

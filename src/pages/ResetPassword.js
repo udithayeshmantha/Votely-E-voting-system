@@ -1,30 +1,32 @@
 import React from 'react';
+import Logo from '../assets/logo.png';
 
 const ResetPassword = () => {
   return (
     <div className="main-container">
-        <div className="welcome-section">
-            <h3>Welcome to</h3>
-            <h1>Votely</h1>
-        </div>
+       <div className="logo-container">
+          <img src={Logo} alt="" />
+       </div>
         
         <div className="form">
             <form action="">
-                <h2>Reset Password</h2>
-                <p>Lorem ipsum is simply dummy text of the printing and typesetting industry.</p>
+                <h2 className='secondary-heading'>Reset Password</h2>
+                <p className='primary-text'>Lorem ipsum is simply dummy text of the printing and typesetting industry.</p>
+                <label for="vin">VIN</label>
                 <input 
                 type="text"
                 name="vin"
                 placeholder="Enter VIN"
                 required
-                 /> 
+                 />
+                <label for="email">Email</label>
                 <input
                 type="email"
                 name="email"
-                placeholder="Enter Email address"
+                placeholder="Email address"
                 required
                 />
-                <button type="submit">Send Code</button>
+                <button type="submit" className='primary-btn'>Send Code</button>
             </form>
         </div>
     </div>

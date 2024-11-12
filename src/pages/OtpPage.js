@@ -5,8 +5,8 @@ const OtpPage = () => {
     <div className="main-container">
         <div className="otp-form">
             <form>
-                <h2>Enter verification code</h2>
-                <p>A verification code has been sent to your phone number</p>
+                <h2 className='secondary-heading'>Enter verification code</h2>
+                <p className='primary-text'>A verification code has been sent to your phone number</p>
 
                 <input 
                 type="text"
@@ -39,8 +39,8 @@ const OtpPage = () => {
                 maxlength="1"
                 />
 
-                <button type="submit">Verify</button>
-                <p>Didn’t get a code? <a href="/"> Click here to resend </a></p>
+                <button type="submit" className='primary-btn'>Verify</button>
+                <p className='primary-text'>Didn’t get a code? <a href="/"> Click here to resend </a></p>
             </form> 
         </div>
     </div>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+import Logo from '../assets/logo.png';
 
-const SignIn = () => {
+const SignIn = ({}) => {
   const [form, setForm] = useState({
     email: '',
     password: ''
@@ -21,42 +22,41 @@ const SignIn = () => {
 
 
   return (
-    <div>
       <div className="main-container">
-        <div className="welcome-section">
-          <h3>Welcome to </h3>
-          <h1>Votely</h1>
+        <div className="logo-container">
+          <img src={Logo} alt="" />
         </div>
         <div className="form">
-          <h2>Sign In</h2>
-          <p>Lorem ipsum is simply dummy text of the printing and typesetting industry.</p>
+          <h2 className='secondary-heading'>Sign In</h2>
+          <p className='primary-text'>Lorem ipsum is simply dummy text of the printing and typesetting industry.</p>
           <form onSubmit={handleSubmit}>
+            <label for="email">Email</label>
             <input
               type="email"
               name="email"
-              placeholder="Enter Email address"
+              placeholder="Email address"
               value={form.email}
               onChange={handleChange}
               required
             />
+            <label for="password">Password</label>
             <input
               type="password"
               name="password"
-              placeholder="Enter Password"
+              placeholder="Password"
               value={form.password}
               onChange={handleChange}
               required
             />
-            <p className='forgot-password'><a href="/forgot-password">Forgot Password?</a></p>
+            <a href="/forgot-password">Forgot Password?</a>
 
-            <button type="submit">Sign In</button>
+            <button type="submit" className='primary-btn'>Sign In</button>
           </form>
-          <p>
+          <p className='primary-text'>
             Don't have an account? <a href="/signup">Sign Up</a>
           </p>
         </div>
       </div>
-    </div>
   )
 }
 

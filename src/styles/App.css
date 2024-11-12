@@ -9,8 +9,7 @@
   font-family: Arial, sans-serif;
 }
 
-/* SignUp & SignIn Page */
-  
+/* SignUp, SignIn Page & Reset Password */
   .main-container {
     display: flex;
     justify-content: center;
@@ -21,29 +20,14 @@
     font-family: Arial, sans-serif;
   }
   
-  .welcome-section {
+  .logo-container{
     flex: 1;
-    padding-left: 5rem;
-    color: #fff;
-  }
-  
-  .welcome-section h1 {
-    font-size: 6rem;
-    margin-left: 100px;
-    font-weight: bold;
-
-  }
-
-  .welcome-section h3 {
-    color: #fff;  
-    font-size: 2rem;
-    margin-left: 50px;
-
+    padding-left: 20rem;
   }
   
   .form {
     width: 100%;
-    max-width: 800px;
+    max-width: 650px;
     flex: 1;
     background-color: #fff;
     border-radius: 20px;
@@ -52,13 +36,15 @@
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   }
   
-  .form h2 {
+  .secondary-heading {
     font-size: 1.8rem;
     margin-bottom: 0.5rem;
+    text-align: center;
+    font-weight: bold;
     
   }
   
-  .form p {
+  .primary-text{
     color: #6b6b6b;
     margin-bottom: 0.5rem;
     margin-top: 0.3rem;
@@ -78,7 +64,7 @@
     padding: 0.8rem;
     margin: 0.5rem 0;
     border: 1px solid #ccc;
-    border-radius: 10px;
+    border-radius: 20px;
   
   }
   .terms{
@@ -91,19 +77,19 @@
     margin-right: 0.5rem;
 }
 
-  .form button {
+  .primary-btn {
     width: 100%;
     padding: 0.8rem;
     background-color: #f7028b;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 20px;
     cursor: pointer;
     font-size: 1rem;
     margin: 20px 0;
   }
   
-  .form button:hover {
+  .primary-btn:hover {
     background-color: #d90276;
   }
   
@@ -115,12 +101,6 @@
   .form a:hover {
     text-decoration: underline;
   }
-  
-  .forgot-password {
-    text-align: right;
-    margin-top: 0.5rem;
-  }
-
 
 /* OTP Page */
 .otp-form {
@@ -130,17 +110,6 @@
   border-radius: 20px;
   padding: 2rem;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-}
-
-.otp-form h2 {
-  font-size: 1.8rem;
-  margin-bottom: 0.5rem;
-  
-}
-
-.otp-form p {
-  color: #6b6b6b;
-  margin-bottom: 1.5rem;
 }
 
 .otp-form input {
@@ -154,22 +123,6 @@
   text-align: center;
 }
 
-.otp-form button {
-  width: 100%;
-  padding: 0.8rem;
-  background-color: #f7028b;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1rem;
-  margin: 20px 0;
-}
-
-.otp-form button:hover {
-  background-color: #d90276;
-}
-
 .otp-form a {
   color: #f7028b;
   text-decoration: none;
@@ -179,3 +132,49 @@
   text-decoration: underline;
 }
 
+/* Register form */
+.reg-form{
+  width: 100%;
+  flex: 1;
+  background-color: #fff;
+  border-radius:50px;
+  padding: 5rem;
+  margin: 5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.reg-form input {
+  width: 25%;
+  padding: 0.8rem;
+  margin: 0.5rem 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  gap: 10px;
+  font-size: 18px;
+}
+
+.reg-form label {
+  display: blocK;
+  text-align: left;
+  color: #333;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.small-logo{
+  width: 100px;
+  height: 50px;
+  margin: 0.1rem  50rem;
+}
+.secondary-heading-lf {
+  text-align: left;
+}
+.primary-text-lf{
+  text-align: left;
+  padding-bottom: 25px;
+}
+
+.name-group {
+  display: flex;
+  justify-content: space-between;
+}

@@ -4,6 +4,8 @@ import SignUp from './pages/SignUp';
 import SignIn from './pages/SignIn';
 import ResetPassword from './pages/ResetPassword';
 import OtpPage from './pages/OtpPage';
+import RegForm from './components/RegForm';
+
 
 function App() {
   return (
@@ -13,6 +15,7 @@ function App() {
       <SignIn />
       <ResetPassword />
       <OtpPage />
+      <RegForm />
     </div>
   );
 }
