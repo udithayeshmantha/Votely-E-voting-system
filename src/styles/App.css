@@ -174,7 +174,7 @@
   padding-bottom: 25px;
 }
 
-.name-group {
+.form-group {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
 }
