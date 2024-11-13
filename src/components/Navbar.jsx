@@ -24,8 +24,7 @@ const Navbar = () => {
                 <a href="#">English</a>
               </li>
             </ul>
-             </div>
-            
+          </div>
         </div>
       </div>
       {/* lower navbar */}
