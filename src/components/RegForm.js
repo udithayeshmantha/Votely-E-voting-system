@@ -13,21 +13,24 @@ const RegForm = () => {
                 <h2 className='secondary-heading secondary-heading-lf'>Fill out your information</h2>
                 <p className='primary-text primary-text-lf'>Please fill out your information below</p>
             </div>
-            <div className="name-group">
+
+            <div className="form-group">
                 <label for="firstname">FIRST NAME</label>
                 <input 
                 type="text"
                 name="fisrtName"
                 placeholder="First Name"
                 />
-           
+            </div>
+            <div className="form-group">
                 <label for="firstname">MIDDLE NAME</label>
                 <input 
                 type="text"
                 name="MiddleName"
                 placeholder="Middle Name"
                 />
-      
+            </div>
+            <div className="form-group">
                 <label for="firstname">LAST NAME</label>
                 <input 
                 type="text"
