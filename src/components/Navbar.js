@@ -9,7 +9,7 @@ const Navbar = () => {
         <div>
           <div>
             <a href="#">
-              <h1 className="logo">Votely</h1>
+              <img src="" alt="" />
             </a>
           </div>
           <div>
