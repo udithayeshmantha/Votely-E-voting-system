@@ -4,7 +4,7 @@ import Logo from "../assets/logo.png";
 
 const Header = () => {
   return (
-    <div className="flex justify-evenly bg-indigo-600 text-white h-48">
+    <div className="flex justify-evenly bg-blue-500 text-white h-48 rounded-t-xl ">
       <div className="justify-items-center content-center space-y-2 ">
         <a href="#" className="">
           <img src={Logo} alt="" className="w-40 " />
