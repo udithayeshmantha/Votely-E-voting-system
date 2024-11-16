@@ -25,14 +25,14 @@ function classNames(...classes) {
 
 export default function Navbar() {
   return (
-    <Disclosure as="nav" className="bg-neutral-300">
-      <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+    <Disclosure as="nav" className="bg-neutral-300 ">
+      <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 ">
         <div className="relative flex h-16 items-center justify-between">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
             {/* Mobile menu button */}
             <DisclosureButton className="group relative inline-flex items-center justify-center rounded-md p-2 hover:bg-gray-400 hover:text-black ">
               <span className="absolute -inset-0.5" />
-              <span className="sr-only">Open main menu</span>
+              <span className="sr-only ">Open main menu</span>
               <Bars3Icon
                 aria-hidden="true"
                 className="block size-6 group-data-[open]:hidden"
@@ -60,7 +60,7 @@ export default function Navbar() {
                       item.current
                         ? "underline-offset-8 underline decoration-2 font-semibold"
                         : "font-normal",
-                      "rounded-md px-3 py-2 text-sm"
+                      "rounded-md px-3 py-2 text-sm font-Poppins"
                     )}
                   >
                     {item.name}
@@ -79,7 +79,7 @@ export default function Navbar() {
                       item.current
                         ? "underline-offset-8 underline decoration-2 font-semibold"
                         : "font-normal",
-                      "rounded-md px-3 py-2 text-sm font-semibold"
+                      "rounded-md px-3 py-2 text-sm font-normal font-Poppins"
                     )}
                   >
                     {item.name}
