@@ -4,10 +4,9 @@ const OtpPage = () => {
   return (
     <div className="main-container">
         <div className="otp-form">
+            <h2 className='secondary-heading'>Enter verification code</h2>
+            <p className='primary-text'>A verification code has been sent to your phone number</p>
             <form>
-                <h2 className='secondary-heading'>Enter verification code</h2>
-                <p className='primary-text'>A verification code has been sent to your phone number</p>
-
                 <input 
                 type="text"
                 name="otp"

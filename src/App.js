@@ -7,7 +7,6 @@ import ResetPassword from './pages/ResetPassword';
 import OtpPage from './pages/OtpPage';
 import RegForm from './components/RegForm';
 
-
 function App() {
   return (
     <div className="App">
