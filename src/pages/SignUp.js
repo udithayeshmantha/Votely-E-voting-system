@@ -24,7 +24,7 @@ const SignUp = () => {
   };
 
   return (
-    <div className="md:flex">
+    <div className="main-container">
       <div className="logo-container">
         <img src={Logo} alt="" />
       </div>

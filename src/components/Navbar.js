@@ -11,13 +11,13 @@ import { Link } from "react-router-dom";
 
 const navigation = [
   { name: "Home", href: "/", current: undefined },
-  { name: "About", href: "/signin", current: undefined },
-  { name: "Contact Us", href: "/login", current: undefined },
-  { name: "FAQs", href: "/login", current: undefined },
+  { name: "About", href: "/about", current: undefined },
+  { name: "Contact Us", href: "/contact", current: undefined },
+  { name: "FAQs", href: "/faqs", current: undefined },
 ];
 const buttons = [
-  { name: "Sign Up", href: "", current: undefined },
-  { name: "Login", href: "", current: undefined },
+  { name: "Sign Up", href: "/signup", current: undefined },
+  { name: "Login", href: "/login", current: undefined },
 ];
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");

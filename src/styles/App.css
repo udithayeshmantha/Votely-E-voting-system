@@ -80,7 +80,7 @@
 .primary-btn {
   width: 100%;
   padding: 0.8rem;
-  background-color: #f7028b;
+  background-color: #7a59dc;
   color: white;
   border: none;
   border-radius: 10px;
@@ -90,11 +90,11 @@
 }
 
 .primary-btn:hover {
-  background-color: #d90276;
+  background-color: #6C4AB6;
 }
 
 .form a {
-  color: #f7028b;
+  color: #7a59dc;
   text-decoration: none;
 }
 
@@ -124,7 +124,7 @@
 }
 
 .otp-form a {
-  color: #f7028b;
+  color: #7a59dc;
   text-decoration: none;
 }
 
@@ -152,7 +152,7 @@
 }
 
 .reg-form label {
-  display: blocK;
+  display: block;
   text-align: left;
   color: #333;
   font-weight: bold;
