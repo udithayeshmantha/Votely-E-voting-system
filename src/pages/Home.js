@@ -8,7 +8,7 @@ const Home = () => {
       className="bg-cover bg-center bg-fixed "
       style={{ backgroundImage: `url(${Bg})` }}
     >
-      <div className=" flex flex-col lg:flex-row justify-around items-center gap-5 px-20 py-60 md:px-20 md:py-52 lg:px-52  lg:py-44 ">
+      <div className=" flex flex-col lg:flex-row justify-around items-center gap-5 px-20 py-60 md:px-20 md:py-52 lg:px-52  lg:py-48 ">
         <div className="text-center lg:text-left ">
           <div className="font-black text-3xl md:text-4xl lg:text-5xl font-Poppins">
             Votely{" "}
@@ -33,7 +33,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="bg-blue-500 flex flex-col lg:flex-row justify-evenly lg:items-start items-center text-left ">
+      <div className="bg-blue-500 flex flex-col lg:flex-row justify-evenly lg:items-start items-center text-left shadow-lg">
         <div className=" text-white p-10 lg:pr-20 lg:pl-5 lg:pb-20 lg:pt-10  lg:mb-0 justify-items-center lg:justify-items-start">
           <div className="text-sm font-Poppins">Step 1</div>
           <div className="text-3xl font-bold font-Poppins">SIGN UP</div>
@@ -72,6 +72,9 @@ const Home = () => {
             without jeopardizing the integrity of your vote.
           </div>
         </div>
+      </div>
+      <div className="flex justify-center">
+        sdsfsdf
       </div>
     </div>
   );
