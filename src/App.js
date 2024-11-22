@@ -7,6 +7,8 @@ import "./styles/App.css";
 import Footer from "./components/Footer";
 import SignUp from "./pages/SignUp";
 import Form from "./components/Form";
+import ResetPassword from "./pages/ResetPassword";
+import OtpPage from "./pages/OtpPage";
 
 function App() {
   return (
@@ -19,9 +21,9 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />}></Route>
       </Routes>
-      <Form />
       <Footer /> */}
-        <Form />   
+      
+      <Form />
     </Router>
 
 

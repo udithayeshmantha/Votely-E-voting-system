@@ -14,57 +14,54 @@ const Form = () => {
         </div>
 
         {/* Title */}
-        <h2 className="text-lg font-bold text-gray-800 mb-2">
+        <h2 className="text-2xl mb-2 font-bold">
           Fill out your information
         </h2>
-        <p className="text-sm text-gray-600 mb-8">
+        <p className="mb-8 text-gray-600 text-sm">
           Please fill out your information below
         </p>
 
         {/* Form */}
         <form className="space-y-6">
-          {/* First, Middle, and Last Name in One Row */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div className="flex flex-col">
-              <label className="text-sm font-medium text-gray-700">First Name</label>
+              <label className="block text-left text-gray-800 font-bold">First Name</label>
               <input
                 type="text"
                 placeholder="First Name"
-                className="text-sm mt-1 p-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
+                className="w-full text-sm p-2 mt-1 border border-gray-300 rounded-lg"
               />
             </div>
 
             <div className="flex flex-col">
-              <label className="text-sm font-medium text-gray-700">Middle Name</label>
+              <label className="block text-left text-gray-800 font-bold">Middle Name</label>
               <input
                 type="text"
                 placeholder="Middle Name"
-                className="text-sm mt-1 p-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
+                className="w-full text-sm p-2 mt-1 border border-gray-300 rounded-lg"
               />
             </div>
 
             <div className="flex flex-col">
-              <label className="text-sm font-medium text-gray-700">Last Name</label>
+              <label className="block text-left text-gray-800 font-bold">Last Name</label>
               <input
                 type="text"
                 placeholder="Last Name"
-                className="text-sm mt-1 p-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
+                className="w-full text-sm p-2 mt-1 border border-gray-300 rounded-lg"
               />
             </div>
           </div>
 
-          {/* Birthday */}
           <div className="flex flex-col">
-            <label className="text-sm font-medium text-gray-700">Birthday</label>
+            <label className="block text-left text-gray-800 font-bold">Birthday</label>
             <input
               type="date"
-              className="text-sm mt-1 p-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
+              className="w-full text-sm p-2 mt-1 border border-gray-300 rounded-lg"
             />
           </div>
 
-          {/* Contact Number */}
           <div className="flex flex-col">
-            <label className="text-sm font-medium text-gray-700">Contact Number</label>
+            <label className="block text-left text-gray-800 font-bold">Contact Number</label>
             <div className="flex items-center mt-1">
               <span className="p-2 text-sm inline-flex items-center px-3 border border-r-0 border-gray-300 bg-gray-100 text-gray-700 rounded-l-md">
                 +94
@@ -72,36 +69,34 @@ const Form = () => {
               <input
                 type="text"
                 placeholder="Contact Number"
-                className="text-sm p-2 border border-gray-300 rounded-r-md focus:ring-blue-500 focus:border-blue-500 flex-1"
+                className="w-full text-sm p-2 border border-gray-300 rounded-r-lg"
               />
             </div>
           </div>
 
-          {/* Email */}
           <div className="flex flex-col">
-            <label className="text-sm font-medium text-gray-700">Email</label>
+            <label className="block text-left text-gray-800 font-bold">Email</label>
             <input
               type="email"
               placeholder="Email"
-              className="text-sm mt-1 p-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
+              className="w-full text-sm p-2 mt-1 border border-gray-300 rounded-lg"
             />
           </div>
 
-          {/* Organization */}
           <div className="flex flex-col">
-            <label className="text-sm font-medium text-gray-700">Organization</label>
+            <label className="block text-left text-gray-800 font-bold">Organization</label>
             <input
               type="text"
               placeholder="Organization"
-              className="text-sm mt-1 p-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
+              className="w-full text-sm p-2 mt-1 border border-gray-300 rounded-lg"
             />
           </div>
 
           {/* Address: Province, Barangay, and City in One Column */}
           <div className="space-y-4">
             <div className="flex flex-col">
-              <label className="text-sm font-medium text-gray-700">Province</label>
-              <select className="text-sm mt-1 p-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
+              <label className="block text-left text-gray-800 font-bold">Province</label>
+              <select className="w-full text-sm p-2 mt-1 border border-gray-300 rounded-lg">
                 <option>Northern Province</option>
                 <option>North Central Province</option>
                 <option>North Western Province</option>
@@ -115,17 +110,17 @@ const Form = () => {
             </div>
 
             <div className="flex flex-col">
-              <label className="text-sm font-medium text-gray-700">
+              <label className="block text-left text-gray-800 font-bold">
                 City/Municipality
               </label>
-              <select className="text-sm mt-1 p-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
+              <select className="w-full text-sm p-2 mt-1 border border-gray-300 rounded-lg">
                 <option>City/Municipality</option>
               </select>
             </div>
 
             <div className="flex flex-col">
-              <label className="text-sm font-medium text-gray-700">Electoral District</label>
-              <select className="text-sm mt-1 p-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
+              <label className="block text-left text-gray-800 font-bold">Electoral District</label>
+              <select className="w-full text-sm p-2 mt-1 border border-gray-300 rounded-lg">
                 <option>Colombo</option>
                 <option>Gampaha</option>
                 <option>Kaluthara</option>
@@ -144,7 +139,7 @@ const Form = () => {
           <div>
             <button
               type="submit"
-              className="w-full bg-blue-700 text-white p-3 rounded-lg font-medium hover:bg-blue-800 transition"
+              className="w-full p-3 bg-[#7a59dc] text-white rounded-lg cursor-pointer text-base hover:bg-[#6C4AB6] transition"
             >
               SUBMIT
             </button>
