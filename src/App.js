@@ -6,11 +6,12 @@ import Login from "./pages/Login";
 import "./styles/App.css";
 import Footer from "./components/Footer";
 import SignUp from "./pages/SignUp";
+import Form from "./components/Form";
 
 function App() {
   return (
     <Router>
-      <Navbar />
+      {/* <Navbar />
       
       <Routes>
         <Route path="/" element={<Home />} />
@@ -18,9 +19,12 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />}></Route>
       </Routes>
-      <Footer />
-      
+      <Form />
+      <Footer /> */}
+        <Form />   
     </Router>
+
+
   );
 }
 
