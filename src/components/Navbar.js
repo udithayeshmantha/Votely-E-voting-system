@@ -17,7 +17,7 @@ const navigation = [
 ];
 const buttons = [
   { name: "Sign Up", href: "/signup", current: undefined },
-  { name: "Login", href: "/login", current: undefined },
+  { name: "Login", href: "/signin", current: undefined },
 ];
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");

@@ -23,7 +23,7 @@ const SignIn = ({}) => {
 
 
   return (
-      <div className="flex justify-center items-center h-screen bg-cover bg-center bg-fixed" style={{ backgroundImage: `url(${Bg})` }}>
+      <div className="flex justify-center items-center h-screen bg-cover bg-center bg-fixed " style={{ backgroundImage: `url(${Bg})` }}>
         <div className="flex-1 pl-80">
           <img src={Logo} alt="" />
         </div>
