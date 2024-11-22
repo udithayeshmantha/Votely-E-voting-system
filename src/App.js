@@ -5,20 +5,22 @@ import SignIn from "./pages/SignIn";
 import Login from "./pages/Login";
 import "./styles/App.css";
 import Footer from "./components/Footer";
+import FAQ from "./pages/FAQ";
 
 function App() {
   return (
-    <Router>
-      <Navbar />
+    // <Router>
+    //   <Navbar />
       
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/signin" element={<SignIn />} />
-        <Route path="/login" element={<Login />} />
-      </Routes>
-      <Footer />
+    //   <Routes>
+    //     <Route path="/" element={<Home />} />
+    //     <Route path="/signin" element={<SignIn />} />
+    //     <Route path="/login" element={<Login />} />
+    //   </Routes>
+    //   <Footer />
       
-    </Router>
+    // </Router>
+    <FAQ />
   );
 }
 
