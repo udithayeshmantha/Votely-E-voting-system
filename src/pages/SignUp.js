@@ -24,21 +24,20 @@ const SignUp = () => {
   };
 
   return (
-    <div className="main-container">
+    <div className="md:flex">
       <div className="logo-container">
         <img src={Logo} alt="" />
       </div>
       <div className="form">
         <h2 className='secondary-heading'>Sign Up</h2>
         <p className='primary-text'>Welcome to Votely's Online Voting System, please register as a voter to vote in your preferred candidate.</p>
-        <form onSubmit={handleSubmit}>
 
+        <form onSubmit={handleSubmit}>
         <label for="id_no">Voters ID No.</label>
           <input
             type="text"
             name="fullName"
             placeholder="Voters ID No."
-            value={form.fullName}
             onChange={handleChange}
             required
           />
