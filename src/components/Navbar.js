@@ -69,7 +69,7 @@ export default function Navbar() {
               </div>
             </div>
             <div className="hidden sm:ml-6 sm:block">
-              <div className="flex space-x-2">
+              <div className="flex space-x-2 ">
                 {buttons.map((item) => (
                   <Link
                     key={item.name}
@@ -85,7 +85,7 @@ export default function Navbar() {
                     {item.name}
                   </Link>
                 ))}
-              </div>
+                </div>
             </div>
           </div>
         </div>
