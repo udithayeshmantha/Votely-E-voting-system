@@ -9,18 +9,19 @@ import SignUp from "./pages/SignUp";
 import Form from "./components/Form";
 import ResetPassword from "./pages/ResetPassword";
 import OtpPage from "./pages/OtpPage";
+import Contactus from "./pages/Contactus";
 
 function App() {
   return (
     <Router>
-      <Navbar />
-      
+      <Navbar />    
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/signin" element={<SignIn />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />}></Route>
       </Routes>
+      <Contactus />
       <Footer />
     </Router>
 
