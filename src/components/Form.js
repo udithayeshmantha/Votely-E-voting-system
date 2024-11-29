@@ -4,7 +4,7 @@ import Logo from "../assets/logo.png";
 
 const Form = () => {
   return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center">
+    <div className="min-h-screen bg-gray-100 flex items-center justify-center font-Poppins">
       <div className="bg-white shadow-lg rounded-lg p-8 w-full max-w-4xl">
         {/* Logo */}
         <div className="flex justify-center mb-6">
