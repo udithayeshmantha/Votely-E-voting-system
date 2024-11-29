@@ -67,15 +67,53 @@ const Home = () => {
           <div className="font-extrabold text-2xl md:text-3xl lg:text-4xl font-Poppins">
             Make your decision-making process more modern, safe, and efficient.
           </div>
-          <div className="text-xl font-medium font-Poppins">
+          <div className="text-xl font-light
+           font-Poppins">
             Upgrade from manual ballot counting to an online election system
             without jeopardizing the integrity of your vote.
           </div>
         </div>
       </div>
-      <div className="flex justify-center">
-        sdsfsdf
+      <div className="text-center">
+        <h1 className="text-4xl font-bold md:text-3xl lg:text-4xl mb-1 font-Poppins">Our Features</h1>
+        <p className="text-xl font-light mb-4 font-Poppins">We provide an online voting system that exceed expectations. from secure <br/>
+        polling software to the management of complex virtual voting events
+        </p>
       </div>
+      
+      <div className="flex flex-col md:flex-row justify-around items-center p-8">
+
+      <div className="flex flex-col items-center text-center max-w-sm m-4">
+        <div className="w-16 h-16 bg-purple-100 flex items-center justify-center rounded-full mb-4">
+          <img src="jhhhhh" alt="Secured Platform" className="w-8 h-8" />
+        </div>
+        <h3 className="text-lg font-semibold text-gray-800">Secured Platform</h3>
+        <p className="text-sm text-gray-600 mt-2">
+          With our system, your data is secured
+        </p>
+      </div>
+
+      <div className="flex flex-col items-center text-center max-w-sm m-4">
+        <div className="w-16 h-16 bg-purple-100 flex items-center justify-center rounded-full mb-4">
+          <img src="/icons/vote-icon.svg" alt="Vote Online" className="w-8 h-8" />
+        </div>
+        <h3 className="text-lg font-semibold text-gray-800">Vote Online</h3>
+        <p className="text-sm text-gray-600 mt-2">
+          In just a few clicks, you can vote your preferred candidates
+        </p>
+      </div>
+
+      <div className="flex flex-col items-center text-center max-w-sm m-4">
+        <div className="w-16 h-16 bg-purple-100 flex items-center justify-center rounded-full mb-4">
+          <img src="/icons/results-icon.svg" alt="Real-Time Results" className="w-8 h-8" />
+        </div>
+        <h3 className="text-lg font-semibold text-gray-800">Real-Time Results</h3>
+        <p className="text-sm text-gray-600 mt-2">
+          View real-time voting results and scores of each candidate
+        </p>
+      </div>
+    </div>
+
     </div>
   );
 };
