@@ -20,7 +20,7 @@ const Home = () => {
             Let's make voting and elections easy for you. This site ensures a
             secured voting session.
           </div>
-          <button className="mt-6 px-6 py-3 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition duration-300 font-Poppins">
+          <button className="mt-6 px-6 py-3 bg-purple-600 text-white font-semibold rounded-lg shadow-md hover:bg-purple-900 transition duration-300 font-Poppins">
             Get Started
           </button>
         </div>
@@ -33,14 +33,14 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="bg-blue-500 flex flex-col lg:flex-row justify-evenly lg:items-start items-center text-left shadow-lg">
+      <div className="bg-purple-600 flex flex-col lg:flex-row justify-evenly lg:items-start items-center text-left shadow-lg">
         <div className=" text-white p-10 lg:pr-20 lg:pl-5 lg:pb-20 lg:pt-10  lg:mb-0 justify-items-center lg:justify-items-start">
           <div className="text-sm font-Poppins">Step 1</div>
           <div className="text-3xl font-bold font-Poppins">SIGN UP</div>
           <div className="text-lg hidden lg:block font-Poppins">
             Create an account to vote
           </div>
-          <button className="font-Poppins mt-6 px-6 py-3 bg-white text-blue-500 font-semibold rounded-lg shadow-md hover:bg-neutral-300 transition duration-300 hidden lg:block">
+          <button className="font-Poppins mt-6 px-6 py-3 bg-white text-[#8d3ae5] font-semibold rounded-lg shadow-md hover:bg-neutral-300 transition duration-300 hidden lg:block">
             Sign Up Now
           </button>
         </div>
@@ -53,7 +53,7 @@ const Home = () => {
         </div>
         <div className="text-white p-10 lg:pr-5 lg:pl-5 lg:pb-20 lg:pt-10 justify-items-center lg:justify-items-start">
           <div className="text-sm font-Poppins">Step 3</div>
-          <div className="text-3xl font-bold text-center font-Poppins">
+          <div className="text-3xl font-bold text-left font-Poppins">
             VIEW ELECTION RESULTS
           </div>
           <div className="text-lg hidden lg:block font-Poppins">

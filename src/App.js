@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import SignIn from "./pages/SignIn";
@@ -13,19 +13,37 @@ import OtpPage from "./pages/OtpPage";
 function App() {
   return (
     <Router>
-      <Navbar />
       
+      <ConditionalNavBar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/signin" element={<SignIn />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<SignUp />}></Route>
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/form" element={<Form />} />
       </Routes>
-      <Footer />
+      <ConditionalFooter />
     </Router>
-
-
   );
 }
+const ConditionalNavBar = () => {
+  const location = useLocation();
+
+  // Paths where the navbar should be hidden
+  const hiddenPaths = ["/signin", "/signup", "/form"];
+
+  // Render navbar only if current path is not in hiddenPaths
+  return !hiddenPaths.includes(location.pathname) ? <Navbar />  : null;
+};
+
+const ConditionalFooter = () => {
+  const location = useLocation();
+
+  // Paths where the footer should be hidden
+  const hiddenPaths = ["/signin", "/signup", "/form"];
+
+  // Render footer only if current path is not in hiddenPaths
+  return !hiddenPaths.includes(location.pathname) ? <Footer /> : null;
+};
 
 export default App;
