@@ -30,7 +30,7 @@ const SignUp = () => {
   };
 
   return (
-    <div className="flex flex-col lg:flex-row justify-around items-center gap-10 px-10 py-20 md:px-10 md:pt-28 lg:px-48 lg:pt- bg-cover bg-center bg-fixed" style={{ backgroundImage: `url(${Bg})` }}>
+    <div className="flex flex-col lg:flex-row justify-around items-center gap-10 px-10 py-20 font-Poppins md:px-10 md:pt-28 lg:px-48 lg:pt- bg-cover bg-center bg-fixed" style={{ backgroundImage: `url(${Bg})` }}>
       <div className="lg:pr-10">
         <img src={Logo} alt="Logo" />
       </div>
