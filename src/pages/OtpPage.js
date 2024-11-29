@@ -3,7 +3,7 @@ import Bg from "../assets/bg.jpg";
 
 const OtpPage = () => {
   return (
-    <div className="flex justify-center items-center h-screen bg-cover bg-center bg-fixed" style={{ backgroundImage: `url(${Bg})` }}>
+    <div className="flex justify-center items-center h-screen font-Poppins bg-cover bg-center bg-fixed" style={{ backgroundImage: `url(${Bg})` }}>
         <div className="w-full max-w-lg bg-white rounded-lg p-8 shadow-xl">
             <h2 className='text-3xl mb-2 text-center font-bold'>Enter verification code</h2>
             <p className='mb-2 mt-1 text-center text-gray-600'>A verification code has been sent to your phone number</p>

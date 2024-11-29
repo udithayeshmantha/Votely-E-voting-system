@@ -30,7 +30,7 @@ const SignUp = () => {
   };
 
   return (
-    <div className="flex flex-col lg:flex-row justify-around items-center gap-10 px-10 py-20 font-Poppins md:px-10 md:pt-28 lg:px-48 lg:pt- bg-cover bg-center bg-fixed" style={{ backgroundImage: `url(${Bg})` }}>
+    <div className="min-h-screen flex flex-col lg:flex-row justify-around items-center gap-10 px-10 py-20 font-Poppins md:px-10 md:pt-28 lg:px-48 lg:pt- bg-cover bg-center bg-fixed" style={{ backgroundImage: `url(${Bg})` }}>
       <div className="lg:pr-10">
         <img src={Logo} alt="Logo" />
       </div>
@@ -69,7 +69,7 @@ const SignUp = () => {
 
           <div className='flex items-center'>
             <input type="checkbox" name="terms" id="" className="w-auto mr-2" />
-            <p className="mb-2 mt-1 text-center text-gray-600">I agree to Votely's <a href="#" className='text-[#7a59dc]'>Terms & Conditions</a> & <a href="#" className='text-[#7a59dc]'>Privacy Policy</a></p>
+            <p className="mb-2 mt-1 text-center text-gray-600">I agree to Votely's <a href="#" className='text-[#7a59dc] hover:underline'>Terms & Conditions</a> & <a href="#" className='text-[#7a59dc] hover:underline'>Privacy Policy</a></p>
           </div>
 
           <button type="submit" className="w-full p-3 bg-[#7a59dc] text-white rounded-lg cursor-pointer text-base my-5 hover:bg-[#6C4AB6] transition">Register</button>
