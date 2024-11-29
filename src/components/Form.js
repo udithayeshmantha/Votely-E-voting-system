@@ -8,15 +8,13 @@ const Form = () => {
       <div className="bg-white shadow-lg rounded-lg p-8 w-full max-w-4xl">
         {/* Logo */}
         <div className="flex justify-center mb-6">
-            <Link to="/">
-              <img alt="Volety" src={Logo} className="h-8 w-auto" />
-            </Link>
+          <Link to="/">
+            <img alt="Volety" src={Logo} className="h-8 w-auto" />
+          </Link>
         </div>
 
         {/* Title */}
-        <h2 className="text-2xl mb-2 font-bold">
-          Fill out your information
-        </h2>
+        <h2 className="text-2xl mb-2 font-bold">Fill out your information</h2>
         <p className="mb-8 text-gray-600 text-sm">
           Please fill out your information below
         </p>
@@ -145,6 +143,11 @@ const Form = () => {
             </button>
           </div>
         </form>
+
+        {/* Back to Sign In */}
+        <div className="text-center mt-4">
+          <Link to="/signup" className="text-[#7a59dc] hover:underline">Back to Sign In</Link>
+        </div>
       </div>
     </div>
   );
