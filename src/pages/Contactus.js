@@ -6,7 +6,7 @@ const Contactus = () => {
     
     <div className="min-h-screen bg-cover bg-center bg-fixed font-Poppins" style={{ backgroundImage: `url(${Bg})` }}>
         <div>
-            <h1 className='text-5xl pt-40 text-center font-bold'>CONTACT US</h1>
+            <h1 className='text-5xl pt-20 text-center font-bold'>CONTACT US</h1>
             <h3 className='text-2xl m-5 text-center'>Have a question? We're here to help.</h3>
         </div>
         <div className='flex items-center justify-center'>
@@ -67,7 +67,7 @@ const Contactus = () => {
             ></textarea>
           </div>
 
-          <div className="flex items-center space-x-3">
+          <div className="flex items-center w-2/6 p-6 border border-gray-300 rounded-md space-x-3">
             <input
               type="checkbox"
               className="h-4 w-4 text-blue-600 border-gray-300 rounded"
@@ -79,7 +79,7 @@ const Contactus = () => {
           <div>
             <button
               type="submit"
-              className="w-full bg-[#7a59dc] text-white py-3 rounded-md font-medium hover:bg-blue-800 transition"
+              className="w-full bg-[#7a59dc] text-white py-3 rounded-md font-medium hover:bg-[#6C4AB6] transition"
             >
               SUBMIT REQUEST
             </button>
