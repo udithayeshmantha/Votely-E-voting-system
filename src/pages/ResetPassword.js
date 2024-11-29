@@ -4,7 +4,7 @@ import Bg from "../assets/bg.jpg";
 
 const ResetPassword = () => {
   return (
-    <div className="flex justify-center items-center h-screen bg-cover bg-center bg-fixed" style={{ backgroundImage: `url(${Bg})` }}>
+    <div className="flex justify-center items-center h-screen font-Poppins bg-cover bg-center bg-fixed" style={{ backgroundImage: `url(${Bg})` }}>
        <div className="flex-1 pl-80">
           <img src={Logo} alt="" />
        </div>

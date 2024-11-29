@@ -9,6 +9,7 @@ import SignUp from "./pages/SignUp";
 import Form from "./components/Form";
 import ResetPassword from "./pages/ResetPassword";
 import OtpPage from "./pages/OtpPage";
+import Contactus from "./pages/Contactus";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/signup" element={<SignUp />} />
         <Route path="/form" element={<Form />} />
       </Routes>
+      <Contactus />
       <ConditionalFooter />
     </Router>
   );
