@@ -9,11 +9,11 @@ import Form from "./components/Form";
 import ResetPassword from "./pages/ResetPassword";
 import OtpPage from "./pages/OtpPage";
 import Contactus from "./pages/Contactus";
+import FAQ from "./pages/FAQ";
 
 function App() {
   return (
     <Router>
-      
       <ConditionalNavBar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -21,6 +21,7 @@ function App() {
         <Route path="/signup" element={<SignUp />} />
         <Route path="/form" element={<Form />} />
       </Routes>
+      <FAQ />
       <ConditionalFooter />
     </Router>
   );
