@@ -4,30 +4,30 @@ import Logo from "../assets/logo_white.png";
 
 const Footer = () => {
   return (
-    <div className="flex justify-evenly bg-blue-500 text-white h-48  ">
+    <div className="flex justify-evenly bg-purple-600 text-white h-48 font-Poppins">
       <div className="justify-items-center content-center space-y-2 ">
         <a href="#" className="">
           <img src={Logo} alt="" className="w-40 " />
         </a>
-        <div className="text-xs font-Poppins">
+        <div className="text-xs">
           Copyright © 2024. All rights reserved.
         </div>
       </div>
       <div className="justify-items-left p-8 content-center hidden md:block">
-        <div className="font-semibold pb-2 font-Poppins">Legal</div>
+        <div className="font-semibold pb-2">Legal</div>
         <div className="text-sm">
           <div className="font-medium pb-1">
-            <Link to="/terms-and-conditions" className="font-Poppins">
+            <Link to="/terms-and-conditions" className="">
               Terms and Conditions
             </Link>
           </div>
           <div className="font-medium pb-1">
-            <Link to="/privacy-policy" className="font-Poppins">
+            <Link to="/privacy-policy" className="">
               Privacy Policy
             </Link>
           </div>
           <div className="font-medium pb-1">
-            <Link to="/faqs" className="font-Poppins">
+            <Link to="/faqs" className="">
               FAQs
             </Link>
           </div>
@@ -36,14 +36,14 @@ const Footer = () => {
       <div className=" justify-items-left p-8 content-center hidden md:block ">
         <div className="font-semibold pb-2">Contact Us</div>
         <div className="text-sm ">
-          <div className="font-medium pb-1 font-Poppins">
+          <div className="font-medium pb-1">
             Address : Uva Wellassa University, Sri Lanka
           </div>
-          <div className="font-medium pb-1 font-Poppins">
+          <div className="font-medium pb-1">
             Email : Votely@gmail.com
           </div>
-          <div className="font-medium pb-1 font-Poppins">
-            Phone No : +94 076 169 3863
+          <div className="font-medium pb-1">
+            Phone No : +94 76 169 3863
           </div>
         </div>
       </div>

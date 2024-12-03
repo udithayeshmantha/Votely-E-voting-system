@@ -11,13 +11,13 @@ import { Link } from "react-router-dom";
 
 const navigation = [
   { name: "Home", href: "/", current: undefined },
-  { name: "About", href: "/signin", current: undefined },
-  { name: "Contact Us", href: "/login", current: undefined },
-  { name: "FAQs", href: "/login", current: undefined },
+  { name: "About", href: "/about", current: undefined },
+  { name: "Contact Us", href: "/contact", current: undefined },
+  { name: "FAQs", href: "/faqs", current: undefined },
 ];
 const buttons = [
-  { name: "Sign Up", href: "", current: undefined },
-  { name: "Login", href: "", current: undefined },
+  { name: "Sign Up", href: "/signup", current: undefined },
+  { name: "Login", href: "/signin", current: undefined },
 ];
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -69,7 +69,7 @@ export default function Navbar() {
               </div>
             </div>
             <div className="hidden sm:ml-6 sm:block">
-              <div className="flex space-x-2">
+              <div className="flex space-x-2 ">
                 {buttons.map((item) => (
                   <Link
                     key={item.name}
@@ -85,7 +85,7 @@ export default function Navbar() {
                     {item.name}
                   </Link>
                 ))}
-              </div>
+                </div>
             </div>
           </div>
         </div>
