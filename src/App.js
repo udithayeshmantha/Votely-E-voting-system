@@ -4,19 +4,25 @@ import Home from "./pages/Home";
 import SignIn from "./pages/SignIn";
 import "./styles/App.css";
 import Footer from "./components/Footer";
+import SignUp from "./pages/SignUp";
+import Form from "./components/Form";
+import ResetPassword from "./pages/ResetPassword";
+import OtpPage from "./pages/OtpPage";
+import Contactus from "./pages/Contactus";
+import FAQ from "./pages/FAQ";
 
 function App() {
   return (
     <Router>
-      <Navbar />
-      
+      <ConditionalNavBar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/signin" element={<SignIn />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/form" element={<Form />} />
       </Routes>
-      <Footer />
-      
+      <FAQ />
+      <ConditionalFooter />
     </Router>
   );
 }
