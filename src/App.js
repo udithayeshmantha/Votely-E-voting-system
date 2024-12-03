@@ -21,7 +21,6 @@ function App() {
         <Route path="/signup" element={<SignUp />} />
         <Route path="/form" element={<Form />} />
       </Routes>
-      <FAQ />
       <ConditionalFooter />
     </Router>
   );
