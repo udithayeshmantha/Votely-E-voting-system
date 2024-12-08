@@ -15,7 +15,6 @@ function App() {
   return (
     <Router>
       
-      
       <ConditionalNavBar />
       <Routes>
         <Route path="/" element={<Home />} />
