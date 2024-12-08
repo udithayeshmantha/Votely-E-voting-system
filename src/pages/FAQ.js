@@ -1,22 +1,22 @@
 import React from 'react'
 import FAQImage from "../assets/image.jpg";
+import Bg from "../assets/bg.jpg";
 
 const FAQ = () => {
   return (
     
-    <div>
-
-        <div style={{ textAlign: "center", marginBottom: "20px" }}>
+    <div className='min-h-screen bg-cover bg-center bg-fixed font-Poppins' style={{ backgroundImage: `url(${Bg})` }}>
+        <div className='flex justify-center items-center'>
         <img 
           src={FAQImage} 
-          alt="FAQ Illustration" 
-          style={{ width: "100%", maxWidth: "600px", height: "auto" }} 
+          alt="FAQ Illustration"
+          className='w-2/4'
         />
         </div>
-            <h1 className='text-2xl text-center'>Frequently Asked Questions</h1>
+            <h1 className='text-3xl text-center font-bold pb-5'>Frequently Asked Questions</h1>
 
             <div>
-                <h3 className='text-xl text-center'>1. How can I be sure that my vote and information are safe on this platform?</h3>
+                <h3 className='text-xl '>1. How can I be sure that my vote and information are safe on this platform?</h3>
                 <p className=''>
                     Your vote and personal information are secured on this platform because the system is built on the highest security protocols and standards. It also utilizes the latest encryption technologies to ensure data security and privacy. Additionally, the system is designed to prevent any attempts to tamper with, alter, or manipulate the voting process.
                 </p>
