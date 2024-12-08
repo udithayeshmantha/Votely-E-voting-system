@@ -12,8 +12,8 @@ import { Link } from "react-router-dom";
 const navigation = [
   { name: "Home", href: "/", current: undefined },
   { name: "About", href: "/about", current: undefined },
-  { name: "Contact Us", href: "/contact", current: undefined },
-  { name: "FAQs", href: "/faqs", current: undefined },
+  { name: "Contact Us", href: "/contactus", current: undefined },
+  { name: "FAQs", href: "/FAQ", current: undefined },
 ];
 const buttons = [
   { name: "Sign Up", href: "/signup", current: undefined },
