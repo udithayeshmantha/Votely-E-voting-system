@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Logo from '../assets/logo.png';
 import Bg from "../assets/bg.jpg";
 
+
 const SignIn = ({}) => {
   const [form, setForm] = useState({
     email: '',
@@ -23,7 +24,7 @@ const SignIn = ({}) => {
   };
 
   return (
-    <div className=" min-h-screen flex flex-col lg:flex-row justify-around items-center gap-10 px-20 py-32 font-Poppins md:px-20 md:py-32 lg:px-52 lg:py-48 bg-cover bg-center bg-fixed" style={{ backgroundImage: `url(${Bg})` }}>
+    <div className=" min-h-screen flex flex-col lg:flex-row justify-around items-center gap-10 px-20 py-28 font-Poppins md:px-20 md:py-32 lg:px-52 lg:py-48 bg-cover bg-center bg-fixed" style={{ backgroundImage: `url(${Bg})` }}>
       <div className="lg:pr-10">
         <img src={Logo} alt="Logo" />
       </div>
@@ -51,7 +52,7 @@ const SignIn = ({}) => {
             onChange={handleChange}
             required
           />
-          <a href="/forgot-password" className="text-[#7a59dc] hover:underline">Forgot Password?</a>
+          <a href="/resetpassword" className="text-[#7a59dc] hover:underline">Forgot Password?</a>
 
           <button type="submit" className='w-full p-3 bg-[#7a59dc] text-white rounded-lg cursor-pointer text-base my-5 hover:bg-[#6C4AB6]'>Sign In</button>
         </form>

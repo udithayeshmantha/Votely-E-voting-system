@@ -4,12 +4,12 @@ import Bg from "../assets/bg.jpg";
 
 const ResetPassword = () => {
   return (
-    <div className="flex justify-center items-center h-screen font-Poppins bg-cover bg-center bg-fixed" style={{ backgroundImage: `url(${Bg})` }}>
-       <div className="flex-1 pl-80">
+    <div className=" min-h-screen flex flex-col lg:flex-row justify-between items-center gap-10 px-20 py-48 font-Poppins md:px-20 md:py-40 lg:px-52 lg:py-48 bg-cover bg-center bg-fixed " style={{ backgroundImage: `url(${Bg})` }}>
+       <div className="flex ">
           <img src={Logo} alt="" />
        </div>
         
-        <div className="w-full max-w-screen-sm bg-white rounded-lg p-8 mr-80 shadow-xl">
+        <div className="w-full max-w-screen-sm bg-white rounded-lg p-8  shadow-xl">
             <h2 className='text-3xl mb-2 text-center font-bold'>Reset Password</h2>
             <p className='mb-2 mt-1 text-center text-gray-600'>Lorem ipsum is simply dummy text of the printing and typesetting industry.</p>
             <form action="">
@@ -29,7 +29,8 @@ const ResetPassword = () => {
                 className="w-full p-3 my-2 border border-gray-300 rounded-lg"
                 required
                 />
-                <button type="submit" className='w-full p-3 bg-[#7a59dc] text-white rounded-lg cursor-pointer text-base my-5 hover:bg-[#6C4AB6]'>Send Code</button>
+                <button type="submit" className='w-full p-3 bg-[#7a59dc] text-white rounded-lg cursor-pointer text-base my-5 hover:bg-[#6C4AB6]'><a href="/otppage">Send Code</a>
+                </button>
             </form>
         </div>
     </div>
