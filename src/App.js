@@ -16,6 +16,7 @@ import OtpPage from "./pages/OtpPage";
 import Contactus from "./pages/Contactus";
 import FAQ from "./pages/FAQ";
 import Dashboard from "./components/Dashboard";
+import AboutUs from "./pages/aboutus";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
         <Route path="/form" element={<Form />} />
         <Route path="/contactus" element={<Contactus />} />
         <Route path="/FAQ" element={<FAQ />} />
+        <Route path="/aboutus" element={<AboutUs />} />
       </Routes>
       <ConditionalFooter />
       

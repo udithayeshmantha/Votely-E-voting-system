@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 
 const navigation = [
   { name: "Home", href: "/", current: undefined },
-  { name: "About", href: "/about", current: undefined },
+  { name: "About", href: "/aboutus", current: undefined },
   { name: "Contact Us", href: "/contactus", current: undefined },
   { name: "FAQs", href: "/FAQ", current: undefined },
 ];
