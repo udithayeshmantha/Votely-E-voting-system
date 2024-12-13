@@ -1,4 +1,9 @@
-import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import SignIn from "./pages/SignIn";
@@ -9,41 +14,57 @@ import Form from "./components/Form";
 import ResetPassword from "./pages/ResetPassword";
 import OtpPage from "./pages/OtpPage";
 import Contactus from "./pages/Contactus";
-import FAQ from "./pages/faq";
+import FAQ from "./pages/FAQ";
+import Dashboard from "./components/Dashboard";
 
 function App() {
   return (
+    
     <Router>
-      
       <ConditionalNavBar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/signin" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
+        <Route path="/resetpassword" element={<ResetPassword />} />
+        <Route path="/otppage" element={<OtpPage />} />
         <Route path="/form" element={<Form />} />
         <Route path="/contactus" element={<Contactus />} />
         <Route path="/FAQ" element={<FAQ />} />
-        
       </Routes>
       <ConditionalFooter />
+      
     </Router>
+    
   );
 }
 const ConditionalNavBar = () => {
   const location = useLocation();
 
   // Paths where the navbar should be hidden
-  const hiddenPaths = ["/signin", "/signup", "/form"];
+  const hiddenPaths = [
+    "/signin",
+    "/signup",
+    "/form ",
+    "/resetpassword",
+    "/otppage",
+  ];
 
   // Render navbar only if current path is not in hiddenPaths
-  return !hiddenPaths.includes(location.pathname) ? <Navbar />  : null;
+  return !hiddenPaths.includes(location.pathname) ? <Navbar /> : null;
 };
 
 const ConditionalFooter = () => {
   const location = useLocation();
 
   // Paths where the footer should be hidden
-  const hiddenPaths = ["/signin", "/signup", "/form"];
+  const hiddenPaths = [
+    "/signin",
+    "/signup",
+    "/form ",
+    "/resetpassword",
+    "/otppage",
+  ];
 
   // Render footer only if current path is not in hiddenPaths
   return !hiddenPaths.includes(location.pathname) ? <Footer /> : null;
