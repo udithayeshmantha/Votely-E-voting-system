@@ -3,7 +3,7 @@ import React from 'react';
 
 const AboutUs = () => {
   return (
-    <div className="bg-gray-50 text-gray-800 p-8">
+    <div className="bg-gray-50 text-gray-800 p-8 font-Poppins">
       {/* About Us Section */}
       <section className="text-center mb-12">
         <h1 className="text-3xl font-bold text-blue-700">ABOUT US</h1>

@@ -54,6 +54,7 @@ const demoTheme = createTheme({
   },
 });
 
+// ...existing code...
 function PageContent({ pathname }) {
   if (pathname === "/dashboard") {
     return (
@@ -62,8 +63,8 @@ function PageContent({ pathname }) {
           py: 4,
           display: "flex",
           flexDirection: "column",
-          alignItems: "center",
-          textAlign: "center",
+          alignItems: "flex-start", // Changed from "center" to "flex-start"
+          textAlign: "left", // Changed from "center" to "left"
         }}
       >
         <Main />
@@ -78,8 +79,8 @@ function PageContent({ pathname }) {
           py: 4,
           display: "flex",
           flexDirection: "column",
-          alignItems: "center",
-          textAlign: "center",
+          alignItems: "flex-start", // Changed from "center" to "flex-start"
+          textAlign: "left", // Changed from "center" to "left"
         }}
       >
         <Voter />
@@ -93,8 +94,8 @@ function PageContent({ pathname }) {
           py: 4,
           display: "flex",
           flexDirection: "column",
-          alignItems: "center",
-          textAlign: "center",
+          alignItems: "flex-start", // Changed from "center" to "flex-start"
+          textAlign: "left", // Changed from "center" to "left"
         }}
       >
         <Votersguideline />
@@ -108,8 +109,8 @@ function PageContent({ pathname }) {
           py: 4,
           display: "flex",
           flexDirection: "column",
-          alignItems: "center",
-          textAlign: "center",
+          alignItems: "flex-start", // Changed from "center" to "flex-start"
+          textAlign: "left", // Changed from "center" to "left"
         }}
       >
         <Setting />
@@ -117,6 +118,7 @@ function PageContent({ pathname }) {
     );
   }
 }
+// ...existing code...
 
 PageContent.propTypes = {
   pathname: PropTypes.string.isRequired,

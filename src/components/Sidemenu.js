@@ -9,7 +9,7 @@ import LogoutIcon from '@mui/icons-material/Logout';
 
 const Sidemenu = () => {
   return (
-    <div className='h-screen w-60 bg-purple-100 flex flex-col items-center py-6 rounded-r-xl font-Poppins'>
+    <div className='h-screen w-full md:w-60 bg-purple-100 flex flex-col items-center py-6 rounded-r-xl font-Poppins'>
         <div className='text-center my-6'>
             <img src={Profile} alt="Profile" className='w-20 h-20 rounded-full border-2 border-blue-500 mx-auto' />
             <h3 className='mt-2 text-lg font-semibold'>Lasantha Pradeep</h3>
@@ -36,7 +36,6 @@ const Sidemenu = () => {
                     <a href="/vote" className='flex items-center font-semibold px-6 py-3 my-10 rounded-r-xl hover:bg-purple-700 hover:text-white transition duration-300'><LogoutIcon className='mr-4'/> Log Out</a>
                 </li>
             </ul>
-
         </div>
     </div>
   )
