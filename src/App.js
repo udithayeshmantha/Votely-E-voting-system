@@ -14,7 +14,7 @@ import Form from "./components/Form";
 import ResetPassword from "./pages/ResetPassword";
 import OtpPage from "./pages/OtpPage";
 import Contactus from "./pages/Contactus";
-import FAQ from "./pages/FAQ";
+import FAQ from "./pages/faq";
 import Dashboard from "./components/Dashboard";
 import AboutUs from "./pages/aboutus";
 import Sidemenu from "./components/Sidemenu";
@@ -23,7 +23,7 @@ function App() {
   return (
     
     <Router>
-      {/* <ConditionalNavBar />
+      <ConditionalNavBar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/signin" element={<SignIn />} />
@@ -35,7 +35,7 @@ function App() {
         <Route path="/FAQ" element={<FAQ />} />
         <Route path="/aboutus" element={<AboutUs />} />
       </Routes>
-      <ConditionalFooter /> */}
+      <ConditionalFooter />
     
     <Dashboard/>
     </Router>
