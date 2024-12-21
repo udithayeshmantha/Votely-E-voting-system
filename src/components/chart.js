@@ -1,13 +1,27 @@
 import * as React from 'react';
 import { BarChart } from '@mui/x-charts/BarChart';
+import { dataset, valueFormatter } from '../dataset/weather';
+import { AlignHorizontalCenter, Padding } from '@mui/icons-material';
 
-export default function BasicBars() {
+const chartSetting = {
+  xAxis: [
+    {
+      label: 'rainfall (mm)',
+    },
+  ],
+  width: 350,
+  height: 200,
+  padding: 6,
+};
+
+export default function HorizontalBars() {
   return (
     <BarChart
-      xAxis={[{ scaleType: 'band', data: ['group A', 'group B', 'group C'] }]}
-      series={[{ data: [4, 3, 5] }, { data: [1, 6, 3] }, { data: [2, 5, 6] }]}
-      width={500}
-      height={300}
+      dataset={dataset}
+      yAxis={[{ scaleType: 'band', dataKey: 'month' }]}
+      series={[{ dataKey: 'seoul', label: 'Seoul rainfall', valueFormatter }]}
+      layout="horizontal"
+      {...chartSetting}
     />
   );
 }

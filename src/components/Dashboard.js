@@ -63,7 +63,7 @@ function PageContent({ pathname }) {
           py: 4,
           display: "flex",
           flexDirection: "column",
-          alignItems: "flex-start", // Changed from "center" to "flex-start"
+          alignItems: "flex-center", // Changed from "center" to "flex-start"
           textAlign: "left", // Changed from "center" to "left"
         }}
       >

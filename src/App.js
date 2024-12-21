@@ -14,7 +14,7 @@ import Form from "./components/Form";
 import ResetPassword from "./pages/ResetPassword";
 import OtpPage from "./pages/OtpPage";
 import Contactus from "./pages/Contactus";
-import FAQ from "./pages/faq";
+import FAQ from "./pages/FAQ";
 import Dashboard from "./components/Dashboard";
 import AboutUs from "./pages/aboutus";
 import Sidemenu from "./components/Sidemenu";
