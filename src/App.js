@@ -4,73 +4,72 @@ import {
   Route,
   useLocation,
 } from "react-router-dom";
-import Navbar from "./components/Navbar";
-import Home from "./pages/Home";
-import SignIn from "./pages/SignIn";
-import "./styles/App.css";
-import Footer from "./components/Footer";
 import SignUp from "./pages/SignUp";
-import Form from "./components/Form";
 import ResetPassword from "./pages/ResetPassword";
 import OtpPage from "./pages/OtpPage";
 import Contactus from "./pages/Contactus";
 import FAQ from "./pages/FAQ";
-import Dashboard from "./components/Dashboard";
+import Sidebar from "./components/dashboard components/Sidebar";
 import AboutUs from "./pages/aboutus";
-import Sidemenu from "./components/Sidemenu";
+import routeConfig from "./components/routeConfig";
+import Home from "./pages/Home";
+import SignIn from "./pages/SignIn";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import "./styles/App.css";
 
 function App() {
   return (
-    
     <Router>
       <ConditionalNavBar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/signin" element={<SignIn />} />
-        <Route path="/signup" element={<SignUp />} />
-        <Route path="/resetpassword" element={<ResetPassword />} />
-        <Route path="/otppage" element={<OtpPage />} />
-        <Route path="/form" element={<Form />} />
-        <Route path="/contactus" element={<Contactus />} />
-        <Route path="/FAQ" element={<FAQ />} />
-        <Route path="/aboutus" element={<AboutUs />} />
-      </Routes>
+      <div className="flex">
+        {/* <Sidebar /> */}
+        <div className="flex-grow">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/signin" element={<SignIn />} />
+            <Route path="/signup" element={<SignUp />} />
+            <Route path="/resetpassword" element={<ResetPassword />} />
+            <Route path="/otppage" element={<OtpPage />} />
+            <Route path="/contactus" element={<Contactus />} />
+            <Route path="/FAQ" element={<FAQ />} />
+            <Route path="/aboutus" element={<AboutUs />} />
+            {routeConfig.map((route) => (
+              <Route
+                key={route.path}
+                path={route.path}
+                element={<route.component />}
+              />
+            ))}
+          </Routes>
+        </div>
+      </div>
       <ConditionalFooter />
-    
-    <Dashboard/>
     </Router>
-    
   );
 }
+
 const ConditionalNavBar = () => {
   const location = useLocation();
-
-  // Paths where the navbar should be hidden
   const hiddenPaths = [
     "/signin",
     "/signup",
-    "/form ",
+    "/form",
     "/resetpassword",
     "/otppage",
   ];
-
-  // Render navbar only if current path is not in hiddenPaths
   return !hiddenPaths.includes(location.pathname) ? <Navbar /> : null;
 };
 
 const ConditionalFooter = () => {
   const location = useLocation();
-
-  // Paths where the footer should be hidden
   const hiddenPaths = [
     "/signin",
     "/signup",
-    "/form ",
+    "/form",
     "/resetpassword",
     "/otppage",
   ];
-
-  // Render footer only if current path is not in hiddenPaths
   return !hiddenPaths.includes(location.pathname) ? <Footer /> : null;
 };
 
