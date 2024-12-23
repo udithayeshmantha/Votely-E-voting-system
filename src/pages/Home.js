@@ -23,7 +23,7 @@ const Home = () => {
             Let's make voting and elections easy for you. This site ensures a
             secured voting session.
           </div>
-          <button className="mt-6 px-6 py-3 bg-purple-600 text-white font-semibold rounded-lg shadow-md hover:bg-purple-900 transition duration-300 font-Poppins">
+          <button className="mt-6 px-6 py-3 bg-[#a81d74] text-white font-semibold rounded-lg shadow-md hover:bg-purple-900 transition duration-300 font-Poppins">
             Get Started
           </button>
         </div>
@@ -36,14 +36,14 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="bg-purple-600 flex flex-col lg:flex-row justify-evenly lg:items-start items-center text-left shadow-lg">
+      <div className="bg-[#a81d74] flex flex-col lg:flex-row justify-evenly lg:items-start items-center text-left shadow-lg">
         <div className=" text-white p-10 lg:pr-20 lg:pl-5 lg:pb-20 lg:pt-10  lg:mb-0 justify-items-center lg:justify-items-start">
           <div className="text-sm font-Poppins">Step 1</div>
           <div className="text-3xl font-bold font-Poppins">SIGN UP</div>
           <div className="text-lg hidden lg:block font-Poppins">
             Create an account to vote
           </div>
-          <button className="font-Poppins mt-6 px-6 py-3 bg-white text-[#8d3ae5] font-semibold rounded-lg shadow-md hover:bg-neutral-300 transition duration-300 hidden lg:block">
+          <button className="font-Poppins mt-6 px-6 py-3 bg-white text-[#a81d74] font-semibold rounded-lg shadow-md hover:bg-neutral-300 transition duration-300 hidden lg:block">
             Sign Up Now
           </button>
         </div>
