@@ -36,7 +36,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="bg-[#a81d74] flex flex-col lg:flex-row justify-evenly lg:items-start items-center text-left shadow-lg">
+      <div className="bg-[#a81d74] flex flex-col lg:flex-row justify-evenly lg:items-start items-center text-left shadow-lg px-16">
         <div className=" text-white p-10 lg:pr-20 lg:pl-5 lg:pb-20 lg:pt-10  lg:mb-0 justify-items-center lg:justify-items-start">
           <div className="text-sm font-Poppins">Step 1</div>
           <div className="text-3xl font-bold font-Poppins">SIGN UP</div>
@@ -56,7 +56,7 @@ const Home = () => {
         </div>
         <div className="text-white p-10 lg:pr-5 lg:pl-5 lg:pb-20 lg:pt-10 justify-items-center lg:justify-items-start">
           <div className="text-sm font-Poppins">Step 3</div>
-          <div className="text-3xl font-bold text-left font-Poppins">
+          <div className="text-3xl font-bold text-center lg:text-left font-Poppins">
             VIEW ELECTION RESULTS
           </div>
           <div className="text-lg hidden lg:block font-Poppins">
@@ -84,7 +84,7 @@ const Home = () => {
         </p>
       </div>
       
-      <div className="flex flex-col lg:flex-row justify-around items-center px-8 pb-20 font-Poppins">
+      <div className="flex flex-col lg:flex-row justify-around items-center px-8 pb-28 font-Poppins">
 
       <div className="flex flex-col items-center text-center max-w-sm m-">
         <div className="w-72 h-72 flex items-center justify-center rounded-full mb-4">
