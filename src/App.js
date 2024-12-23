@@ -22,9 +22,9 @@ function App() {
   return (
     <Router>
       <ConditionalNavBar />
-      <div className="flex">
+      <div className="//flex">
         {/* <Sidebar /> */}
-        <div className="flex-grow">
+        <div className="//flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/signin" element={<SignIn />} />
