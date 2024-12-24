@@ -12,14 +12,14 @@ const FAQ = () => {
         <img
           src={FAQImage}
           alt="FAQ Illustration"
-          className="w-1/2 h-1/2 pt-28 pb-5"
+          className="w-1/2 h-1/2 pt-28 pb-2"
         />
       </div>
 
-      <div className=" px-20 pb-32 sm:px-20 lg:px-32">
-        <div className="text-center mb-12">
-          <h1 className="text-3xl font-bold text-gray-800">
-            Frequently Asked Questions
+      <div className="px-20 pb-32 sm:px-20 lg:px-32 flex-col">
+        <div className="text-center mb-12 ">
+          <h1 className="text-5xl font-bold text-gray-800 ">
+            FREQUENTLY ASKED QUESTIONS
           </h1>
         </div>
         <div className="space-y-8">
