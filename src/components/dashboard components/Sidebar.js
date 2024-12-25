@@ -9,14 +9,13 @@ const Sidebar = () => {
 
   const menuItems = [
     { icon: Home, label: "Dashboard", path: "/" },
-    { icon: Vote, label: "Elections", path: "/elections" },
-    { icon: FileText, label: "Candidates", path: "/candidates" },
-    { icon: Vote, label: "Results", path: "/results" },
+    { icon: Vote, label: "Vote", path: "/candidates" },
+    { icon: FileText, label: "Voter Guideline", path: "/VotersGuideline" },
     { icon: Settings, label: "Settings", path: "/settings" },
   ];
 
   return (
-    <div className="h-screen w-64 bg-neutral-300 border-r border-gray-200 flex flex-col md:w-64 sm:w-20 font-Poppins">
+    <div className="h-screen w-64 bg-neutral-300 border-r border-gray-200 flex flex-col md:w-80 font-Poppins">
       <div className="p-6">
         <div className="flex items-center gap-2 mb-8">
           <Link to="/">
