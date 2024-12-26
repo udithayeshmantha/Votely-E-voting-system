@@ -9,14 +9,13 @@ const Sidebar = () => {
 
   const menuItems = [
     { icon: Home, label: "Dashboard", path: "/" },
-    { icon: Vote, label: "Elections", path: "/elections" },
-    { icon: FileText, label: "Candidates", path: "/candidates" },
-    { icon: Vote, label: "Results", path: "/results" },
+    { icon: Vote, label: "Vote", path: "/candidates" },
+    { icon: FileText, label: "Voter Guideline", path: "/VotersGuideline" },
     { icon: Settings, label: "Settings", path: "/settings" },
   ];
 
   return (
-    <div className="h-screen w-64 bg-neutral-300 border-r border-gray-200 flex flex-col md:w-64 sm:w-20 font-Poppins">
+    <div className="h-screen w-64 bg-neutral-300 border-r border-gray-200 flex flex-col md:w-80 font-Poppins">
       <div className="p-6">
         <div className="flex items-center gap-2 mb-8">
           <Link to="/">
@@ -24,7 +23,7 @@ const Sidebar = () => {
           </Link>
         </div>
 
-        <div className="flex flex-col items-center mb-8">
+        <div className="hidden lg:flex flex-col items-center mb-8">
           <div className="w-20 h-20 rounded-full mb-3">
             <img
               src="/placeholder.svg"
@@ -48,7 +47,7 @@ const Sidebar = () => {
               }`}
             >
               <item.icon size={20} />
-              <span className="hidden sm:inline">{item.label}</span>
+              <span className="hidden sm:flex">{item.label}</span>
             </Link>
           ))}
         </nav>
