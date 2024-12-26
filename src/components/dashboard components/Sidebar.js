@@ -23,7 +23,7 @@ const Sidebar = () => {
           </Link>
         </div>
 
-        <div className="flex flex-col items-center mb-8">
+        <div className="hidden lg:flex flex-col items-center mb-8">
           <div className="w-20 h-20 rounded-full mb-3">
             <img
               src="/placeholder.svg"
@@ -47,7 +47,7 @@ const Sidebar = () => {
               }`}
             >
               <item.icon size={20} />
-              <span className="hidden sm:inline">{item.label}</span>
+              <span className="hidden sm:flex">{item.label}</span>
             </Link>
           ))}
         </nav>

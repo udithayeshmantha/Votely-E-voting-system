@@ -1,14 +1,15 @@
 import React from "react";
+import Votingrafiki from "../../assets/Voting-rafiki.png";
 
 const VotersGuideline = () => {
   return (
-    <div className="bg-white px-6 py-12 sm:px-12 lg:px-24 font-Poppins">
-      <div className="text-center mb-12 ">
-        <h1 className="text-3xl font-bold text-gray-800">Voters Guideline</h1>
+    <div className="bg-white px-12 py-12 sm:px-12 lg:px-12 font-Poppins">
+      <div className="text-center mb-10">
+        <h1 className="text-left text-3xl font-bold text-gray-800">Voters Guideline</h1>
       </div>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+      <div className="grid grid-cols-1 xl:grid-cols-2 gap-5 items-end">
         {/* Guideline List */}
-        <div className="space-y-4">
+        <div className="space-y-4 text-sm">
           {[
             "Before voting, take the time to research the candidates and issues on the ballot.",
             "Make sure you are eligible to vote in the election.",
@@ -26,7 +27,7 @@ const VotersGuideline = () => {
             "Thank you for participating in democracy!",
           ].map((text, index) => (
             <div key={index} className="flex items-start">
-              <div className="flex-shrink-0 bg-blue-600 text-white rounded-full w-8 h-8 flex justify-center items-center font-semibold">
+              <div className="flex-shrink-0 bg-[#a81d74] text-white rounded-full w-8 h-8 flex justify-center items-center font-semibold">
                 {index + 1}
               </div>
               <p className="ml-4 text-gray-700">{text}</p>
@@ -34,18 +35,18 @@ const VotersGuideline = () => {
           ))}
         </div>
         {/* Illustration */}
-        <div className="flex justify-center">
+        <div className="flex justify-end">
           <img
-            src="https://via.placeholder.com/400x400"
+            src={Votingrafiki}
             alt="Voting illustration"
-            className="w-full max-w-md object-contain"
+            className="hidden xl:flex lg:w-10/12"
           />
         </div>
       </div>
       {/* Footer */}
-      <div className="mt-12 text-center text-sm text-gray-600">
+      <div className=" text-left text-sm text-gray-600 pt-10">
         For More Information <br />
-        Please contact: <a href="mailto:ivote@email.com" className="text-blue-600">ivote@email.com</a>
+        Please contact: <a href="mailto:votely@gmail.com" className="text-blue-600">votely@gmail.com</a>
       </div>
     </div>
   );
