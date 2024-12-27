@@ -1,7 +1,6 @@
 import React from "react";
 import { Users, Vote, UserSquare2 } from "lucide-react";
 import DashboardHeader from "./DashboardHeader";
-import DashboardSidebar from "./DashboardHeader";
 import ElectionCard from "./ElectionCard";
 import ElectionTimeline from "./ElectionTimeline";
 import ResultsChart from "./ResultsChart";
@@ -10,13 +9,14 @@ import StatsCard from "./StatsCard";
 const Index = () => {
   return (
     <div className="flex h-screen w-full">
-      
-      <div className="flex-1 overflow-auto">
+      <div className="flex-1 overflow-auto font-Poppins">
         <DashboardHeader />
-        <main className="dashboard-gradient min-h-[calc(100vh-4rem)] p-6">
+        <main className="dashboard-gradient min-h-[calc(100vh-4rem)] px-20 py-6">
           <div className="mb-6">
-            <h1 className="text-2xl font-bold">Hello, Udith!</h1>
-            <p className="text-muted-foreground">Welcome to Votely's Online Voting System</p>
+            <h1 className="text-3xl font-bold">Hello, Udith!</h1>
+            <p className="text-muted-foreground">
+              Welcome to Votely's Online Voting System
+            </p>
           </div>
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -45,7 +45,7 @@ const Index = () => {
             <div className="space-y-6">
               <div className="rounded-xl border bg-card p-6">
                 <h3 className="mb-4 text-lg font-semibold">Calendar</h3>
-                <div className="flex items-center justify-between text-sm">
+                <div className="flex items-center justify-between text-sm px-4">
                   <span>Today</span>
                   <span>Next week</span>
                   <span>This Month</span>
@@ -68,4 +68,3 @@ const Index = () => {
 };
 
 export default Index;
-

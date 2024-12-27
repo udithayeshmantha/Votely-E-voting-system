@@ -1,12 +1,24 @@
 import React from "react";
-import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer } from "recharts";
+import {
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  Tooltip,
+  ResponsiveContainer,
+  Cell,
+} from "recharts";
 
 // Data for the chart
 const data = [
-  { name: "Candidate #1", votes: 120 },
-  { name: "Candidate #2", votes: 150 },
-  { name: "Candidate #3", votes: 90 },
+  { name: "C1", votes: 120 },
+  { name: "C2", votes: 150 },
+  { name: "C3", votes: 90 },
+  { name: "C4", votes: 90 },
+  { name: "C5", votes: 90 },
 ];
+
+const colors = ["#8884d8", "#82ca9d", "#ffc658"];
 
 export function ResultsChart() {
   return (
@@ -14,7 +26,9 @@ export function ResultsChart() {
       <div className="mb-4 flex items-center justify-between">
         <h3 className="text-lg font-semibold">Live Results</h3>
         <div className="flex items-center gap-2">
-          <span className="text-sm text-muted-foreground">President Student Council</span>
+          <span className="text-sm text-muted-foreground">
+            President Student Council
+          </span>
         </div>
       </div>
       <div className="h-64">
@@ -23,7 +37,14 @@ export function ResultsChart() {
             <XAxis dataKey="name" />
             <YAxis />
             <Tooltip />
-            <Bar dataKey="votes" fill="hsl(var(--primary))" radius={[4, 4, 0, 0]} />
+            <Bar dataKey="votes" radius={[4, 4, 0, 0]}>
+              {data.map((entry, index) => (
+                <Cell
+                  key={`cell-${index}`}
+                  fill={colors[index % colors.length]}
+                />
+              ))}
+            </Bar>
           </BarChart>
         </ResponsiveContainer>
       </div>
