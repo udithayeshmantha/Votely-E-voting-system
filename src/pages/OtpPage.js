@@ -44,7 +44,7 @@ const OtpPage = () => {
                 className='w-[16%] p-3 m-2 border border-gray-300 rounded-lg gap-2.5 text-lg text-center'
                 />
                 <button type="submit" className="w-full p-3 bg-[#7a59dc] text-white rounded-lg cursor-pointer text-base my-5 hover:bg-[#6C4AB6]">Verify</button>
-                <p className='mb-2 mt-1 text-center text-gray-600'>Didn’t get a code? <a href="/" className="text-[#7a59dc] hover:underline"> Click here to resend </a></p>
+                <p className='mb-2 mt-1 text-center text-gray-600'>Didn’t get a code? <a href="/" className="text-[#a81d74] hover:underline"> Click here to resend </a></p>
             </form> 
         </div>
     </div>

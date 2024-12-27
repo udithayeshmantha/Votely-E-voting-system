@@ -4,9 +4,9 @@ import Logo from "../assets/logo_white.png";
 
 const Footer = () => {
   return (
-    <div className="flex justify-evenly bg-purple-600 text-white h-48 font-Poppins">
-      <div className="justify-items-center content-center space-y-2 ">
-        <a href="#" className="">
+    <div className="flex justify-evenly bg-[#a81d74] text-white h-48 font-Poppins">
+      <div className="justify-items-center content-center space-y-2 p-8">
+        <a href="a" className="">
           <img src={Logo} alt="" className="w-40 " />
         </a>
         <div className="text-xs">

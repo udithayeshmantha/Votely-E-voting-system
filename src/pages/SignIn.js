@@ -52,15 +52,15 @@ const SignIn = ({}) => {
             onChange={handleChange}
             required
           />
-          <a href="/resetpassword" className="text-[#7a59dc] hover:underline">Forgot Password?</a>
+          <a href="/resetpassword" className="text-[#a81d74] hover:underline">Forgot Password?</a>
 
-          <button type="submit" className='w-full p-3 bg-[#7a59dc] text-white rounded-lg cursor-pointer text-base my-5 hover:bg-[#6C4AB6]'>Sign In</button>
+          <button type="submit" className='w-full p-3 bg-[#a81d74] text-white rounded-lg cursor-pointer text-base my-5'>Sign In</button>
         </form>
         <p className='mb-2 mt-1 text-center text-gray-600'>
-          Don't have an account? <a href="/signup" className="text-[#7a59dc] hover:underline">Sign Up</a>
+          Don't have an account? <a href="/signup" className="text-[#a81d74] hover:underline">Sign Up</a>
         </p>
         <div className="text-center mt-4">
-          <Link to="/" className="text-[#7a59dc] hover:underline">Back to Home</Link>
+          <Link to="/" className="text-[#a81d74] hover:underline">Back to Home</Link>
         </div>
       </div>
     </div>

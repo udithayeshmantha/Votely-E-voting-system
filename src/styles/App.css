@@ -3,3 +3,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.scrollable-content {
+  overflow-y: auto;
+  height: 100vh;
+}
+
