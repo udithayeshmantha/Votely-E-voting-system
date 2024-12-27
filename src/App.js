@@ -8,7 +8,7 @@ import SignUp from "./pages/SignUp";
 import ResetPassword from "./pages/ResetPassword";
 import OtpPage from "./pages/OtpPage";
 import Contactus from "./pages/Contactus";
-import FAQ from "./pages/faq";
+import FAQ from "./pages/FAQ";
 import Sidebar from "./components/dashboard components/Sidebar";
 import AboutUs from "./pages/aboutus";
 import routeConfig from "./components/routeConfig";
