@@ -3,13 +3,13 @@ import Votingrafiki from "../../assets/Voting-rafiki.png";
 
 const VotersGuideline = () => {
   return (
-    <div className="bg-white px-12 py-12 sm:px-12 lg:px-12 font-Poppins">
+    <div className="bg-white px-6 py-12 sm:px-8 lg:px-20 font-Poppins">
       <div className="text-center mb-10">
-        <h1 className="text-left text-3xl font-bold text-gray-800">Voters Guideline</h1>
+        <h1 className="text-3xl font-bold text-gray-800">Voters Guideline</h1>
       </div>
-      <div className="grid grid-cols-1 xl:grid-cols-2 gap-5 items-end">
+      <div className="flex flex-col lg:flex-row items-start lg:items-end">
         {/* Guideline List */}
-        <div className="space-y-4 text-sm">
+        <div className="flex-col space-y-4 text-sm w-full lg:w-2/3">
           {[
             "Before voting, take the time to research the candidates and issues on the ballot.",
             "Make sure you are eligible to vote in the election.",
@@ -35,16 +35,16 @@ const VotersGuideline = () => {
           ))}
         </div>
         {/* Illustration */}
-        <div className="flex justify-end">
+        <div className="hidden lg:flex justify-end w-full lg:w-2/3 mt-10 lg:mt-0">
           <img
             src={Votingrafiki}
             alt="Voting illustration"
-            className="hidden xl:flex lg:w-10/12"
+            className="w-full lg:w-4/5"
           />
         </div>
       </div>
       {/* Footer */}
-      <div className=" text-left text-sm text-gray-600 pt-10">
+      <div className="text-left text-sm text-gray-600 pt-10">
         For More Information <br />
         Please contact: <a href="mailto:votely@gmail.com" className="text-blue-600">votely@gmail.com</a>
       </div>
