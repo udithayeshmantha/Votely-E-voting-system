@@ -1,22 +1,22 @@
 import React from "react";
 import { Users, Vote, UserSquare2 } from "lucide-react";
-import DashboardHeader from "./DashboardHeader";
-import DashboardSidebar from "./DashboardHeader";
-import ElectionCard from "./ElectionCard";
-import ElectionTimeline from "./ElectionTimeline";
-import ResultsChart from "./ResultsChart";
-import StatsCard from "./StatsCard";
+import DashboardHeader from "./components/dashboard/DashboardHeader";
+import DashboardSidebar from "./components/dashboard/DashboardSidebar";
+import ElectionCard from "./components/dashboard/ElectionCard";
+import ElectionTimeline from "./components/dashboard/ElectionTimeline";
+import ResultsChart from "./components/dashboard/ResultsChart";
+import StatsCard from "./components/dashboard/StatsCard";
 
-const Index = () => {
+export default function Index() {
   return (
     <div className="flex h-screen w-full">
-      
+      <DashboardSidebar />
       <div className="flex-1 overflow-auto">
         <DashboardHeader />
         <main className="dashboard-gradient min-h-[calc(100vh-4rem)] p-6">
           <div className="mb-6">
-            <h1 className="text-2xl font-bold">Hello, Udith!</h1>
-            <p className="text-muted-foreground">Welcome to Votely's Online Voting System</p>
+            <h1 className="text-2xl font-bold">Hello, Juan!</h1>
+            <p className="text-muted-foreground">Welcome LOGO's Online Voting System</p>
           </div>
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -65,6 +65,4 @@ const Index = () => {
       </div>
     </div>
   );
-};
-
-export default Index;
+}
