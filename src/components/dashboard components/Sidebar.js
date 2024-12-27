@@ -8,18 +8,18 @@ const Sidebar = () => {
   const isActive = (path) => location.pathname === path;
 
   const menuItems = [
-    { icon: Home, label: "Dashboard", path: "/" },
+    { icon: Home, label: "Dashboard", path: "/Index" },
     { icon: Vote, label: "Vote", path: "/candidates" },
     { icon: FileText, label: "Voter Guideline", path: "/VotersGuideline" },
     { icon: Settings, label: "Settings", path: "/settings" },
   ];
 
   return (
-    <div className="h-screen w-64 bg-neutral-300 border-r border-gray-200 flex flex-col md:w-80 font-Poppins">
-      <div className="p-6">
-        <div className="flex items-center gap-2 mb-8">
+    <div className="h-screen  bg-neutral-300 border-r border-gray-200 flex flex-col  font-Poppins">
+      <div className="p-6 flex flex-col gap-6">
+        <div className="flex justify-start gap-2 mb-8">
           <Link to="/">
-            <img alt="Volety" src={Logo} className="h-8 w-auto" />
+            <img alt="Volety" src={Logo} className="h-auto w-24 lg:w-24" />
           </Link>
         </div>
 
@@ -47,7 +47,7 @@ const Sidebar = () => {
               }`}
             >
               <item.icon size={20} />
-              <span className="hidden sm:flex">{item.label}</span>
+              <span className="hidden sm:flex flex-initial w-32">{item.label}</span>
             </Link>
           ))}
         </nav>
