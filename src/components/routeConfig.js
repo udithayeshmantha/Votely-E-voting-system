@@ -4,7 +4,7 @@ import SignUp from "../pages/SignUp";
 import VotersGuideline from "../components/dashboard components/Voter Guideline";
 
 const routeConfig = [
-  { path: "/", component: Contactus },
+  { path: "/", component: Index },
   { path: "/Index", component: Index },
   { path: "/candidates", component: Contactus },
   { path: "/VotersGuideline", component: VotersGuideline },
