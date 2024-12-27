@@ -8,7 +8,7 @@ import SignUp from "./pages/SignUp";
 import ResetPassword from "./pages/ResetPassword";
 import OtpPage from "./pages/OtpPage";
 import Contactus from "./pages/Contactus";
-import FAQ from "./pages/FAQ";
+import FAQ from "./pages/faq";
 import Sidebar from "./components/dashboard components/Sidebar";
 import AboutUs from "./pages/aboutus";
 import routeConfig from "./components/routeConfig";
@@ -26,14 +26,14 @@ function App() {
         <Sidebar />
         <div className="flex-grow scrollable-content">
           <Routes>
-            {/* <Route path="/" element={<Home />} />
+            <Route path="/" element={<Home />} />
             <Route path="/signin" element={<SignIn />} />
             <Route path="/signup" element={<SignUp />} />
             <Route path="/resetpassword" element={<ResetPassword />} />
             <Route path="/otppage" element={<OtpPage />} />
             <Route path="/contactus" element={<Contactus />} />
             <Route path="/FAQ" element={<FAQ />} />
-            <Route path="/aboutus" element={<AboutUs />} /> */}
+            <Route path="/aboutus" element={<AboutUs />} />
             {routeConfig.map((route) => (
               <Route
                 key={route.path}
@@ -45,7 +45,7 @@ function App() {
         </div>
       </div>
       
-      {/* <ConditionalFooter /> */}
+      <ConditionalFooter />
     </Router>
   );
 }
