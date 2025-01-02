@@ -2,6 +2,7 @@ import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Home, Vote, FileText, Settings, LogOut } from "lucide-react";
 import Logo from "../../assets/logo.png";
+import userlogo from "../../assets/user.png";
 
 const Sidebar = () => {
   const location = useLocation();
@@ -23,10 +24,10 @@ const Sidebar = () => {
           </Link>
         </div>
 
-        <div className="hidden lg:flex flex-col items-center mb-8">
+        <div className="flex-col items-center mb-8">
           <div className="w-20 h-20 rounded-full mb-3">
             <img
-              src="/placeholder.svg"
+              src={userlogo}
               alt="Profile"
               className="w-full h-full rounded-full object-cover"
             />
@@ -47,7 +48,9 @@ const Sidebar = () => {
               }`}
             >
               <item.icon size={20} />
-              <span className="hidden sm:flex flex-initial w-32">{item.label}</span>
+              <span className="hidden sm:flex flex-initial w-32">
+                {item.label}
+              </span>
             </Link>
           ))}
         </nav>

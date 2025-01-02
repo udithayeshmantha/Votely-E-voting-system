@@ -5,7 +5,7 @@ import VotersGuideline from "../components/dashboard components/Voter Guideline"
 import Vote from "../components/dashboard components/Vote";
 
 const routeConfig = [
-  { path: "/", component: Contactus },
+  { path: "/", component: Index },
   { path: "/Index", component: Index },
   { path: "/candidates", component: Vote },
   { path: "/VotersGuideline", component: VotersGuideline },

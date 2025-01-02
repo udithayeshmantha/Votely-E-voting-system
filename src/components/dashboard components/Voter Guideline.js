@@ -5,11 +5,11 @@ const VotersGuideline = () => {
   return (
     <div className="bg-white px-6 py-12 sm:px-8 lg:px-20 font-Poppins">
       <div className="text-center mb-10">
-        <h1 className="text-3xl font-bold text-gray-800">Voters Guideline</h1>
+        <h1 className="text-3xl font-bold text-gray-800 text-left">Voters Guideline</h1>
       </div>
-      <div className="flex flex-col lg:flex-row items-start lg:items-end">
+      <div className="flex flex-col xl:flex-row items-start xl:items-end">
         {/* Guideline List */}
-        <div className="flex-col space-y-4 text-sm w-full lg:w-2/3">
+        <div className="flex-col space-y-4 w-full ">
           {[
             "Before voting, take the time to research the candidates and issues on the ballot.",
             "Make sure you are eligible to vote in the election.",
@@ -27,7 +27,7 @@ const VotersGuideline = () => {
             "Thank you for participating in democracy!",
           ].map((text, index) => (
             <div key={index} className="flex items-start">
-              <div className="flex-shrink-0 bg-[#a81d74] text-white rounded-full w-8 h-8 flex justify-center items-center font-semibold">
+              <div className=" bg-[#a81d74] text-white rounded-full w-8 h-8 flex justify-center items-center font-semibold">
                 {index + 1}
               </div>
               <p className="ml-4 text-gray-700">{text}</p>
@@ -35,7 +35,7 @@ const VotersGuideline = () => {
           ))}
         </div>
         {/* Illustration */}
-        <div className="hidden lg:flex justify-end w-full lg:w-2/3 mt-10 lg:mt-0">
+        <div className="hidden xl:flex justify-end w-full lg:w-2/3 mt-10 lg:mt-0">
           <img
             src={Votingrafiki}
             alt="Voting illustration"
