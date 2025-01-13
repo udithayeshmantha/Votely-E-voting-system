@@ -48,6 +48,9 @@ const VotersGuideline = () => {
         For More Information <br />
         Please contact: <a href="mailto:votely@gmail.com" className="text-blue-600">votely@gmail.com</a>
       </div>
+      <footer className="mt-10 text-center text-gray-500">
+        &copy; Copyright 2025 All rights reserved
+      </footer>
     </div>
   );
 };

@@ -21,20 +21,20 @@ import "./styles/App.css";
 function App() {
   return (
     <Router>
-      <ConditionalNavBar />
+      {/* <ConditionalNavBar /> */}
       <div className="flex">
-        {/* <Sidebar /> */}
-        <div className="flex-grow">
+        <Sidebar />
+        <div className="flex-grow scrollable-content">
         
           <Routes>
-            <Route path="/" element={<Home />} />
+            {/* <Route path="/" element={<Home />} />
             <Route path="/signin" element={<SignIn />} />
             <Route path="/signup" element={<SignUp />} />
             <Route path="/resetpassword" element={<ResetPassword />} />
             <Route path="/otppage" element={<OtpPage />} />
             <Route path="/contactus" element={<Contactus />} />
             <Route path="/FAQ" element={<FAQ />} />
-            <Route path="/aboutus" element={<AboutUs />} />
+            <Route path="/aboutus" element={<AboutUs />} /> */}
             {routeConfig.map((route) => (
               <Route
                 key={route.path}
@@ -46,7 +46,7 @@ function App() {
         </div>
       </div>
       
-      <ConditionalFooter />
+      {/* <ConditionalFooter /> */}
     </Router>
   );
 }
