@@ -24,7 +24,7 @@ const Sidebar = () => {
           </Link>
         </div>
 
-        <div className="flex-col items-center mb-8">
+        <div className="flex flex-col justify-center items-center mb-8">
           <div className="w-20 h-20 rounded-full mb-3">
             <img
               src={userlogo}
