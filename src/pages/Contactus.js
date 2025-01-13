@@ -8,13 +8,15 @@ const Contactus = () => {
       style={{ backgroundImage: `url(${Bg})` }}
     >
       <div>
-        <h1 className="text-4xl md:text-5xl pt-20 text-center font-bold">CONTACT US</h1>
+        <h1 className="text-4xl md:text-5xl pt-20 text-center font-bold text-gray-800 ">
+          CONTACT US
+        </h1>
         <h3 className="text-xl md:text-2xl p-5 text-center">
           Have a question? We're here to help.
         </h3>
       </div>
-      <div className="flex items-center justify-center px:0 sm:px-10 pb-20">
-        <div className="bg-white shadow-lg rounded-lg p-8 w-full max-w-4xl ">
+      <div className="flex items-center justify-center px-4 sm:px-10 pb-20">
+        <div className="bg-white shadow-lg rounded-lg p-8 w-full max-w-4xl">
           <form className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="flex flex-col">
@@ -72,7 +74,7 @@ const Contactus = () => {
                 Questions and Comments
               </label>
               <textarea
-                placeholder=""
+                placeholder="Your message"
                 rows="4"
                 className="mt-1 p-2 border border-gray-300 rounded-md"
               ></textarea>
@@ -82,7 +84,7 @@ const Contactus = () => {
             <div>
               <button
                 type="submit"
-                className="w-full bg-[#a81d74] text-white py-3 rounded-md font-medium transition"
+                className="w-full bg-[#a81d74] text-white py-3 rounded-md font-medium transition hover:bg-[#8d1a63]"
               >
                 SUBMIT REQUEST
               </button>

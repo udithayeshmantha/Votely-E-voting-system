@@ -21,10 +21,11 @@ import "./styles/App.css";
 function App() {
   return (
     <Router>
-      {/* <ConditionalNavBar /> */}
+      <ConditionalNavBar />
       <div className="flex">
-        <Sidebar />
-        <div className="flex-grow scrollable-content">
+        {/* <Sidebar /> */}
+        <div className="flex-grow">
+        
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/signin" element={<SignIn />} />
@@ -45,7 +46,7 @@ function App() {
         </div>
       </div>
       
-      {/* <ConditionalFooter /> */}
+      <ConditionalFooter />
     </Router>
   );
 }
