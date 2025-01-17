@@ -9,7 +9,7 @@ const Sidebar = () => {
   const isActive = (path) => location.pathname === path;
 
   const menuItems = [
-    { icon: Home, label: "Dashboard", path: "/Index" },
+    { icon: Home, label: "Dashboard", path: "/index" },
     { icon: Vote, label: "Vote", path: "/candidates" },
     { icon: FileText, label: "Voter Guideline", path: "/VotersGuideline" },
     { icon: Settings, label: "Settings", path: "/settings" },

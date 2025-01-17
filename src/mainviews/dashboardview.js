@@ -1,13 +1,13 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Sidebar from '../components/dashboard components/Sidebar'; // Ensure this path is correct
-import routeConfig from './routeConfig'; // Import routeConfig
+import routeConfig from '../components/routeConfig'; // Import routeConfig
 
-const RouteConfigComponent = () => {
+const DashboardView = () => {
   return (
     <div className="flex">
-      <Sidebar />
-      <div className="flex-grow">
+      {/* <Sidebar /> */}
+      <div className="flex-grow scrollable-content">
         <Routes>
           {routeConfig.map((route) => (
             <Route
@@ -22,4 +22,4 @@ const RouteConfigComponent = () => {
   );
 };
 
-export default RouteConfigComponent;
+export default DashboardView;

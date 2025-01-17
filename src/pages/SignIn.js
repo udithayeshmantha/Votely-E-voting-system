@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import Logo from '../assets/logo.png';
 import Bg from "../assets/bg.jpg";
 
@@ -63,7 +63,7 @@ const SignIn = () => {
           Don't have an account? <a href="/signup" className="text-[#a81d74] hover:underline">Sign Up</a>
         </p>
         <div className="text-center mt-4">
-          <Link to="/" className="text-[#a81d74] hover:underline">Back to Home</Link>
+          <a href="/" className="text-[#a81d74] hover:underline">Back to Home</a>
         </div>
       </div>
     </div>

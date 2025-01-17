@@ -1,4 +1,3 @@
-import React from 'react';
 import Index from "./Main";
 import VotersGuideline from "../components/dashboard components/Voter Guideline";
 import Vote from "../components/dashboard components/Vote";
