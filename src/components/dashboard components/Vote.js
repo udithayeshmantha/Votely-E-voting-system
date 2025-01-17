@@ -44,8 +44,8 @@ const Vote = () => {
   };
 
   return (
-    <div className="flex-1 overflow-auto p-8">
-      <h1 className="text-2xl font-bold mb-8 text-center">YOU MAY NOW CAST YOUR VOTES!</h1>
+    <div className="flex-1 overflow-auto py-10 px-20 font-Poppins">
+      <h1 className="text-3xl font-bold mb-8 text-left">YOU MAY NOW CAST YOUR VOTES!</h1>
 
       {/* President Section */}
       <section className="mb-12">
@@ -104,6 +104,9 @@ const Vote = () => {
           SUBMIT VOTE
         </button>
       </div>
+      <footer className="mt-10 text-center text-gray-500">
+        &copy; Copyright 2025 All rights reserved
+      </footer>
     </div>
   );
 };

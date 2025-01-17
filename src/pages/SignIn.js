@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import Logo from '../assets/logo.png';
 import Bg from "../assets/bg.jpg";
 
-
-const SignIn = ({}) => {
+const SignIn = () => {
   const [form, setForm] = useState({
     email: '',
     password: ''
   });
+
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     setForm({
@@ -21,10 +22,12 @@ const SignIn = ({}) => {
     e.preventDefault();
     // Handle form submission logic here (e.g., sending data to backend)
     console.log(form);
+    // Assuming login is successful, navigate to the dashboard
+    navigate('/dashboard');
   };
 
   return (
-    <div className=" min-h-screen flex flex-col lg:flex-row justify-around items-center gap-10 px-20 py-28 font-Poppins md:px-20 md:py-32 lg:px-52 lg:py-48 bg-cover bg-center bg-fixed" style={{ backgroundImage: `url(${Bg})` }}>
+    <div className="min-h-screen flex flex-col lg:flex-row justify-around items-center gap-10 px-20 py-28 font-Poppins md:px-20 md:py-32 lg:px-52 lg:py-48 bg-cover bg-center bg-fixed" style={{ backgroundImage: `url(${Bg})` }}>
       <div className="lg:pr-10">
         <img src={Logo} alt="Logo" />
       </div>
@@ -60,7 +63,7 @@ const SignIn = ({}) => {
           Don't have an account? <a href="/signup" className="text-[#a81d74] hover:underline">Sign Up</a>
         </p>
         <div className="text-center mt-4">
-          <Link to="/" className="text-[#a81d74] hover:underline">Back to Home</Link>
+          <a href="/" className="text-[#a81d74] hover:underline">Back to Home</a>
         </div>
       </div>
     </div>
