@@ -5,7 +5,8 @@ import {
 } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Logo from "../assets/logo.png";
-import { Link } from "react-router-dom";
+
+import { Link, useNavigate } from "react-router-dom";
 
 const navigation = [
   { name: "Home", href: "/", current: undefined },
@@ -22,6 +23,18 @@ function classNames(...classes) {
 }
 
 export default function Navbar() {
+
+  const navigate = useNavigate();
+
+  const handleSignUpClick = () => {
+    navigate('/signup');
+  };
+
+  const handleLoginClick = () => {
+    navigate('/signin');
+  };
+
+  
   return (
     <Disclosure as="nav" className="bg-neutral-300 ">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 ">
@@ -66,23 +79,20 @@ export default function Navbar() {
                 ))}
               </div>
             </div>
-            <div className="hidden sm:ml-6 sm:block">
+            <div className="hidden sm:ml-6 sm:block font-Poppins">
               <div className="flex space-x-2 ">
-                {buttons.map((item) => (
-                  <Link
-                    key={item.name}
-                    to={item.href}
-                    aria-current={item.current ? "page" : undefined}
-                    className={classNames(
-                      item.current
-                        ? "underline-offset-8 underline decoration-2 font-semibold"
-                        : "font-normal",
-                      "rounded-md px-3 py-2 text-sm font-normal font-Poppins"
-                    )}
-                  >
-                    {item.name}
-                  </Link>
-                ))}
+              <button
+              onClick={handleSignUpClick}
+              className="px-3 py-2 rounded-md text-sm font-medium"
+            >
+              Sign Up
+            </button>
+            <button
+              onClick={handleLoginClick}
+              className="ml-4 px-3 py-2 rounded-md text-sm font-medium"
+            >
+              Login
+            </button>
               </div>
             </div>
           </div>
@@ -105,20 +115,18 @@ export default function Navbar() {
               {item.name}
             </DisclosureButton>
           ))}
-          {buttons.map((item) => (
-            <DisclosureButton
-              key={item.name}
-              as={Link}
-              to={item.href}
-              aria-current={item.current ? "page" : undefined}
-              className={classNames(
-                item.current ? "font-semibold " : "font-normal ",
-                "block rounded-md px-3 py-2 text-base "
-              )}
+          <button
+              onClick={handleSignUpClick}
+              className="bg-blue-500 text-white px-3 py-2 rounded-md text-sm font-medium"
             >
-              {item.name}
-            </DisclosureButton>
-          ))}
+              Sign Up
+            </button>
+            <button
+              onClick={handleLoginClick}
+              className="ml-4 bg-green-500 text-white px-3 py-2 rounded-md text-sm font-medium"
+            >
+              Login
+            </button>
         </div>
       </DisclosurePanel>
     </Disclosure>

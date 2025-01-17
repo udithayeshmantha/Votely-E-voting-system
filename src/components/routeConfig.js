@@ -1,6 +1,5 @@
-import Contactus from "../pages/Contactus";
+import React from 'react';
 import Index from "./Main";
-import SignUp from "../pages/SignUp";
 import VotersGuideline from "../components/dashboard components/Voter Guideline";
 import Vote from "../components/dashboard components/Vote";
 import Settings from "../components/Settings";
