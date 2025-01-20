@@ -20,6 +20,7 @@ import "./styles/App.css";
 import DashboardView from "./mainviews/dashboardview";
 import Homeview from "./mainviews/Homeview";
 import routeConfig from "./components/routeConfig";
+import Form from "./pages/Form";
 
 function App() {
   return (
@@ -58,6 +59,7 @@ const AppContent = () => {
             <Route path="/" element={<Home />} />
             <Route path="/signin" element={<SignIn />} />
             <Route path="/signup" element={<SignUp />} />
+            <Route path="/form" element={<Form />} />
             <Route path="/resetpassword" element={<ResetPassword />} />
             <Route path="/otppage" element={<OtpPage />} />
             <Route path="/contactus" element={<Contactus />} />
@@ -92,6 +94,7 @@ const ConditionalNavBar = () => {
     "/settings",
     "/index",
     "/dashboard",
+    "/form",
     
   ];
   return !hiddenPaths.includes(location.pathname) ? <Navbar /> : null;
@@ -108,6 +111,7 @@ const ConditionalSidebar = () => {
     "/contactus",
     "/FAQ",
     "/otppage",
+    "/form",
   ];
   return !hiddenPaths.includes(location.pathname) ? <Sidebar /> : null;
 };
@@ -124,6 +128,7 @@ const ConditionalFooter = () => {
     "/settings",
     "/index",
     "/dashboard",
+    "/form",
   ];
   return !hiddenPaths.includes(location.pathname) ? <Footer /> : null;
 };
