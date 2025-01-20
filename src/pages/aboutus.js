@@ -107,7 +107,7 @@ const managementTeam = [
     image: "",
   },
   {
-    name: "Prasith de Alwis",
+    name: "Prasith De Alwis",
     position: "Elections Director",
     image: "",
   },
