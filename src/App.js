@@ -21,6 +21,9 @@ import DashboardView from "./mainviews/dashboardview";
 import Homeview from "./mainviews/Homeview";
 import routeConfig from "./components/routeConfig";
 import Form from "./pages/Form";
+import Admin from "./components/admin components/admin";
+import ManageUsers from "./components/admin components/manageUsers";
+import AddNewUser from "./components/admin components/addnewuser";
 
 function App() {
   return (
@@ -67,6 +70,10 @@ const AppContent = () => {
             <Route path="/aboutus" element={<AboutUs />} />
             <Route path="/dashboard/*" element={<DashboardView />} />
             <Route path="/*" element={<Homeview />} />
+            <Route path="/admin" element={<Admin />} />
+            <Route path="/manageusers" element={<ManageUsers />} />
+            <Route path="/addnewuser" element={<AddNewUser />} />
+
             {routeConfig.map((route) => (
               <Route
                 key={route.path}
