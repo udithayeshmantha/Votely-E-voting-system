@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../context/Authcontext';
 import Logo from '../assets/logo.png';
 import Bg from "../assets/bg.jpg";
 
@@ -8,8 +9,11 @@ const SignIn = () => {
     email: '',
     password: ''
   });
-
+  const [error, setError] = useState('');
+  const [loading, setLoading] = useState(false);
+  
   const navigate = useNavigate();
+  const { login } = useAuth();
 
   const handleChange = (e) => {
     setForm({
@@ -18,12 +22,20 @@ const SignIn = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission logic here (e.g., sending data to backend)
-    console.log(form);
-    // Assuming login is successful, navigate to the dashboard
-    navigate('/dashboard');
+    
+    try {
+      setError('');
+      setLoading(true);
+      await login(form.email, form.password);
+      navigate('/dashboard');
+    } catch (err) {
+      setError('Failed to sign in. Please check your credentials.');
+      console.error(err);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -34,6 +46,13 @@ const SignIn = () => {
       <div className="w-full max-w-screen-sm bg-white rounded-lg p-8 shadow-xl">
         <h2 className='text-3xl mb-2 text-center font-bold'>Sign In</h2>
         <p className='mb-2 mt-1 text-center text-gray-600'>Lorem ipsum is simply dummy text of the printing and typesetting industry.</p>
+        
+        {error && (
+          <div className="mb-4 bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative">
+            {error}
+          </div>
+        )}
+
         <form onSubmit={handleSubmit}>
           <label htmlFor="email" className='block text-left text-gray-800 font-bold mt-4'>Email</label>
           <input
@@ -57,8 +76,17 @@ const SignIn = () => {
           />
           <a href="/resetpassword" className="text-[#a81d74] hover:underline">Forgot Password?</a>
 
-          <button type="submit" className='w-full p-3 bg-[#a81d74] text-white rounded-lg cursor-pointer text-base my-5'>Sign In</button>
+          <button 
+            type="submit" 
+            disabled={loading}
+            className={`w-full p-3 bg-[#a81d74] text-white rounded-lg cursor-pointer text-base my-5 ${
+              loading ? 'opacity-70 cursor-not-allowed' : 'hover:bg-[#8a1860]'
+            }`}
+          >
+            {loading ? 'Signing in...' : 'Sign In'}
+          </button>
         </form>
+        
         <p className='mb-2 mt-1 text-center text-gray-600'>
           Don't have an account? <a href="/signup" className="text-[#a81d74] hover:underline">Sign Up</a>
         </p>

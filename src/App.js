@@ -5,6 +5,7 @@ import {
   Route,
   useLocation,
 } from "react-router-dom";
+import { AuthProvider } from './context/Authcontext';
 import SignUp from "./pages/SignUp";
 import ResetPassword from "./pages/ResetPassword";
 import OtpPage from "./pages/OtpPage";
@@ -21,11 +22,16 @@ import DashboardView from "./mainviews/dashboardview";
 import Homeview from "./mainviews/Homeview";
 import routeConfig from "./components/routeConfig";
 import Form from "./pages/Form";
+import Admin from "./components/admin components/admin";
+import ManageUsers from "./components/admin components/manageUsers";
+import AddNewUser from "./components/admin components/addnewuser";
 
 function App() {
   return (
     <Router>
-      <AppContent />
+      <AuthProvider>
+        <AppContent />
+      </AuthProvider>
     </Router>
   );
 }
@@ -46,7 +52,7 @@ const AppContent = () => {
     ];
     return hiddenPaths.includes(location.pathname)
       ? "scrollable-content-hidden flex-grow"
-      : "scrollable-content  flex-grow";
+      : "scrollable-content flex-grow";
   };
 
   return (
@@ -67,6 +73,10 @@ const AppContent = () => {
             <Route path="/aboutus" element={<AboutUs />} />
             <Route path="/dashboard/*" element={<DashboardView />} />
             <Route path="/*" element={<Homeview />} />
+            <Route path="/admin" element={<Admin />} />
+            <Route path="/manageusers" element={<ManageUsers />} />
+            <Route path="/addnewuser" element={<AddNewUser />} />
+
             {routeConfig.map((route) => (
               <Route
                 key={route.path}
