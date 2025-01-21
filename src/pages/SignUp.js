@@ -1,17 +1,20 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { useAuth } from '../context/Authcontext';
 import Logo from "../assets/logo.png";
 import Bg from "../assets/bg.jpg";
 
 const SignUp = () => {
   const [form, setForm] = useState({
-    fullName: "",
-    vin: "",
+    voterID: "",
     email: "",
     password: "",
-    phonenumber: "",
+    confirmPassword: "",
   });
-
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [termsAccepted, setTermsAccepted] = useState(false);
+  const { signup } = useAuth();
   const navigate = useNavigate();
 
   const handleChange = (e) => {
@@ -21,12 +24,29 @@ const SignUp = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission logic here (e.g., sending data to backend)
-    console.log(form);
-    // Navigate to the Form page after successful submission
-    navigate("/form");
+
+    if (!termsAccepted) {
+      setError("Please accept the Terms & Conditions");
+      return;
+    }
+
+    if (form.password !== form.confirmPassword) {
+      setError("Passwords do not match");
+      return;
+    }
+
+    try {
+      setError("");
+      setLoading(true);
+      await signup(form.email, form.password, form.voterID);
+      navigate("/form");
+    } catch (error) {
+      setError("Failed to create an account: " + error.message);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -44,21 +64,45 @@ const SignUp = () => {
           to vote in your preferred candidate.
         </p>
 
+        {error && (
+          <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-4" role="alert">
+            <span className="block sm:inline">{error}</span>
+          </div>
+        )}
+
         <form onSubmit={handleSubmit}>
           <label
-            htmlFor="id_no"
+            htmlFor="voterID"
             className="block text-left text-gray-800 font-bold mt-4"
           >
             Voters ID No.
           </label>
           <input
             type="text"
-            name="fullName"
+            name="voterID"
             placeholder="Voters ID No."
             className="w-full p-3 my-2 border border-gray-300 rounded-lg"
+            value={form.voterID}
             onChange={handleChange}
             required
           />
+
+          <label
+            htmlFor="email"
+            className="block text-left text-gray-800 font-bold mt-4"
+          >
+            Email Address
+          </label>
+          <input
+            type="email"
+            name="email"
+            placeholder="Email Address"
+            className="w-full p-3 my-2 border border-gray-300 rounded-lg"
+            value={form.email}
+            onChange={handleChange}
+            required
+          />
+
           <label
             htmlFor="password"
             className="block text-left text-gray-800 font-bold mt-4"
@@ -76,15 +120,23 @@ const SignUp = () => {
           />
           <input
             type="password"
-            name="confirmpassword"
+            name="confirmPassword"
             placeholder="Confirm password"
             className="w-full p-3 my-2 border border-gray-300 rounded-lg"
+            value={form.confirmPassword}
             onChange={handleChange}
             required
           />
 
           <div className="flex items-center">
-            <input type="checkbox" name="terms" id="" className="w-auto mr-2" />
+            <input 
+              type="checkbox" 
+              name="terms" 
+              className="w-auto mr-2"
+              checked={termsAccepted}
+              onChange={(e) => setTermsAccepted(e.target.checked)}
+              required 
+            />
             <p className="mb-2 mt-1 text-center text-gray-600">
               I agree to Votely's{" "}
               <a href="#" className="text-[#a81d74] hover:underline">
@@ -99,17 +151,18 @@ const SignUp = () => {
 
           <button
             type="submit"
-            className="w-full p-3 bg-[#a81d74] text-white rounded-lg cursor-pointer text-base my-5 transition"
+            disabled={loading}
+            className="w-full p-3 bg-[#a81d74] text-white rounded-lg cursor-pointer text-base my-5 transition disabled:opacity-50"
           >
-            Register
+            {loading ? "Registering..." : "Register"}
           </button>
         </form>
 
         <p className="mb-2 mt-1 text-center text-gray-600">
           Already have an account?{" "}
-          <a href="/signin" className="text-[#a81d74] hover:underline">
+          <Link to="/signin" className="text-[#a81d74] hover:underline">
             Sign In
-          </a>
+          </Link>
         </p>
         <div className="text-center mt-4">
           <Link to="/" className="text-[#a81d74] hover:underline">
