@@ -8,7 +8,7 @@ const VotersGuideline = () => {
         <h1 className="text-3xl font-bold text-gray-800 text-left">Voters Guideline</h1>
       </div>
       <div className="flex flex-col xl:flex-row items-start xl:items-end">
-        {/* Guideline List */}
+        
         <div className="flex-col space-y-4 w-full ">
           {[
             "Before voting, take the time to research the candidates and issues on the ballot.",

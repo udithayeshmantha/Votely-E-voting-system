@@ -21,6 +21,10 @@ import "./styles/App.css";
 import DashboardView from "./mainviews/dashboardview";
 import Homeview from "./mainviews/Homeview";
 import routeConfig from "./components/routeConfig";
+import Form from "./pages/Form";
+import Admin from "./components/admin components/admin";
+import ManageUsers from "./components/admin components/manageUsers";
+import AddNewUser from "./components/admin components/addnewuser";
 
 function App() {
   return (
@@ -61,6 +65,7 @@ const AppContent = () => {
             <Route path="/" element={<Home />} />
             <Route path="/signin" element={<SignIn />} />
             <Route path="/signup" element={<SignUp />} />
+            <Route path="/form" element={<Form />} />
             <Route path="/resetpassword" element={<ResetPassword />} />
             <Route path="/otppage" element={<OtpPage />} />
             <Route path="/contactus" element={<Contactus />} />
@@ -68,6 +73,10 @@ const AppContent = () => {
             <Route path="/aboutus" element={<AboutUs />} />
             <Route path="/dashboard/*" element={<DashboardView />} />
             <Route path="/*" element={<Homeview />} />
+            <Route path="/admin" element={<Admin />} />
+            <Route path="/manageusers" element={<ManageUsers />} />
+            <Route path="/addnewuser" element={<AddNewUser />} />
+
             {routeConfig.map((route) => (
               <Route
                 key={route.path}
@@ -95,6 +104,8 @@ const ConditionalNavBar = () => {
     "/settings",
     "/index",
     "/dashboard",
+    "/form",
+    
   ];
   return !hiddenPaths.includes(location.pathname) ? <Navbar /> : null;
 };
@@ -110,6 +121,7 @@ const ConditionalSidebar = () => {
     "/contactus",
     "/FAQ",
     "/otppage",
+    "/form",
   ];
   return !hiddenPaths.includes(location.pathname) ? <Sidebar /> : null;
 };
@@ -126,6 +138,7 @@ const ConditionalFooter = () => {
     "/settings",
     "/index",
     "/dashboard",
+    "/form",
   ];
   return !hiddenPaths.includes(location.pathname) ? <Footer /> : null;
 };
