@@ -5,6 +5,7 @@ import {
   Route,
   useLocation,
 } from "react-router-dom";
+import { AuthProvider } from './context/Authcontext';
 import SignUp from "./pages/SignUp";
 import ResetPassword from "./pages/ResetPassword";
 import OtpPage from "./pages/OtpPage";
@@ -28,7 +29,9 @@ import Adminroute from "./components/Adminroute";
 function App() {
   return (
     <Router>
-      <AppContent />
+      <AuthProvider>
+        <AppContent />
+      </AuthProvider>
     </Router>
   );
 }
@@ -49,7 +52,7 @@ const AppContent = () => {
     ];
     return hiddenPaths.includes(location.pathname)
       ? "scrollable-content-hidden flex-grow"
-      : "scrollable-content  flex-grow";
+      : "scrollable-content flex-grow";
   };
 
   const shouldHideAdminBar = () => {
