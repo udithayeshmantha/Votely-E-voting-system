@@ -1,20 +1,15 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Sidebar from '../components/dashboard components/Sidebar'; // Ensure this path is correct
+import Adminroute from '../components/Adminroute'; // Import routeConfig
 
-import routeConfig from '../components/routeConfig';
-import { useSelector } from 'react-redux'; // Import routeConfig // Import routeConfig
-
-
-const DashboardView = () => {
-  const user = useSelector((state) => state.user);
-  console.log(user);
+const adminview = () => {
   return (
     <div className="flex">
       {/* <Sidebar /> */}
       <div className="flex-grow scrollable-content">
         <Routes>
-          {routeConfig.map((route) => (
+          {Adminroute.map((route) => (
             <Route
               key={route.path}
               path={route.path}
@@ -27,4 +22,4 @@ const DashboardView = () => {
   );
 };
 
-export default DashboardView;
+export default adminview;
