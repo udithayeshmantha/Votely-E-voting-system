@@ -3,7 +3,7 @@ import ManageUsers from "./admin components/manageUsers";
 import AddNewUser from "./admin components/addnewuser";
 
 const Adminroute = [
-  { path: "/", component: ManageUsers },
+  { path: "/admin", component: ManageUsers },
   { path: "/admin/users", component: ManageUsers },
   { path: "/admin/add-user", component: AddNewUser },
   { path: "/admin/dashboard", component: AddNewUser },

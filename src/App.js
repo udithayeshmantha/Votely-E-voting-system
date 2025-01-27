@@ -5,7 +5,7 @@ import {
   Route,
   useLocation,
 } from "react-router-dom";
-import { AuthProvider } from './context/Authcontext';
+import { AuthProvider } from "./context/Authcontext";
 import SignUp from "./pages/SignUp";
 import ResetPassword from "./pages/ResetPassword";
 import OtpPage from "./pages/OtpPage";
@@ -22,7 +22,7 @@ import DashboardView from "./mainviews/dashboardview";
 import Homeview from "./mainviews/Homeview";
 import routeConfig from "./components/routeConfig";
 import Form from "./pages/Form";
-import Admin from "./components/admin components/admin";
+import AdminSidebar from "./components/admin components/admin";
 import Adminview from "./mainviews/adminview";
 import Adminroute from "./components/Adminroute";
 
@@ -55,23 +55,19 @@ const AppContent = () => {
       : "scrollable-content flex-grow";
   };
 
-  const shouldHideAdminBar = () => {
-    const hiddenPaths = [
-      "/signin",
-      "/signup",
-      "/resetpassword",
-      "/otppage",
-      "/candidates",
-      "/VotersGuideline",
-      "/settings",
-      "/index",
-      "/dashboard",
-      "/form",
+  const ConditionalAdminSidebar = () => {
+    const location = useLocation();
+    const adminVisiblePaths = [
       "/admin",
+      "/admin/users",
+      "/admin/add-user",
+      "/admin/candidates",
+      "/admin/results",
+      "/admin/settings",
+      "/admin/dashboard",
       "/adminview",
-      "/",
     ];
-    return hiddenPaths.includes(location.pathname);
+    return adminVisiblePaths.includes(location.pathname) ? <AdminSidebar /> : null;
   };
 
   return (
@@ -79,7 +75,8 @@ const AppContent = () => {
       <ConditionalNavBar />
       <div className="flex">
         <ConditionalSidebar />
-        {!shouldHideAdminBar() && <Admin />}
+        <ConditionalAdminSidebar />
+        
         <div className={getScrollableContentClassNames()}>
           <Routes>
             <Route path="/" element={<Home />} />
@@ -93,8 +90,8 @@ const AppContent = () => {
             <Route path="/aboutus" element={<AboutUs />} />
 
             <Route path="/*" element={<Homeview />} />
-            <Route path="/admin" element={<Admin />} />
-            <Route path="/adminview" element={<Adminview />} />
+            
+            <Route path="/*" element={<Adminview />} />
             {/* <Route path="/admin/users" element={<ManageUsers />} />
             <Route path="/admin/add-user" element={<AddNewUser />} /> */}
 
@@ -140,6 +137,7 @@ const ConditionalNavBar = () => {
     "/admin/results",
     "/admin/dashboard",
     "/admin/settings",
+    "/adminview",
   ];
   return !hiddenPaths.includes(location.pathname) ? <Navbar /> : null;
 };
@@ -163,8 +161,24 @@ const ConditionalSidebar = () => {
     "/admin/results",
     "/admin/settings",
     "/admin/dashboard",
+    "/adminview",
   ];
   return !hiddenPaths.includes(location.pathname) ? <Sidebar /> : null;
+};
+
+const ConditionalAdminSidebar = () => {
+  const location = useLocation();
+  const adminVisiblePaths = [
+    "/admin",
+    "/admin/users",
+    "/admin/add-user",
+    "/admin/candidates",
+    "/admin/results",
+    "/admin/settings",
+    "/admin/dashboard",
+    "/adminview",
+  ];
+  return adminVisiblePaths.includes(location.pathname) ? <AdminSidebar /> : null;
 };
 
 const ConditionalFooter = () => {
@@ -185,8 +199,9 @@ const ConditionalFooter = () => {
     "/admin/add-user",
     "/admin/candidates",
     "/admin/results",
-    "/admin/settings",
     "/admin/dashboard",
+    "/admin/settings",
+    "/adminview",
   ];
   return !hiddenPaths.includes(location.pathname) ? <Footer /> : null;
 };
