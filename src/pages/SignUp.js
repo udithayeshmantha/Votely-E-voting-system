@@ -3,10 +3,15 @@ import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from '../context/Authcontext';
 import Logo from "../assets/logo.png";
 import Bg from "../assets/bg.jpg";
+import { handleApiCall } from '../api/handleApiCall';
+import { useDispatch, useSelector } from 'react-redux';
+import { setUser } from "../redux/features/userSlice";
+
 
 const SignUp = () => {
+  const dispatch = useDispatch();
   const [form, setForm] = useState({
-    voterID: "",
+    voterId: "",
     email: "",
     password: "",
     confirmPassword: "",
@@ -40,8 +45,32 @@ const SignUp = () => {
     try {
       setError("");
       setLoading(true);
-      await signup(form.email, form.password, form.voterID);
-      navigate("/form");
+      const response = await handleApiCall(
+        'http://localhost:5000/api/users/user/register',
+        'POST',
+        { 'Content-Type': 'application/json' },
+        {
+          voterId: form.voterId,
+          email: form.email,
+          password: form.password
+        }
+      );
+
+
+
+      console.log('API Response:', response);
+      // localStorage.setItem('userId', response.user._id);
+
+      if (response.status === 201) {
+        dispatch(setUser({
+          uid: response.data.user._id,
+        }));
+        // await signup(form.email, form.password, form.voterId);
+        
+        navigate("/form");
+      } else {
+        setError('Failed to create an account');
+      }
     } catch (error) {
       setError("Failed to create an account: " + error.message);
     } finally {
@@ -72,17 +101,17 @@ const SignUp = () => {
 
         <form onSubmit={handleSubmit}>
           <label
-            htmlFor="voterID"
+            htmlFor="voterId"
             className="block text-left text-gray-800 font-bold mt-4"
           >
             Voters ID No.
           </label>
           <input
             type="text"
-            name="voterID"
+            name="voterId"
             placeholder="Voters ID No."
             className="w-full p-3 my-2 border border-gray-300 rounded-lg"
-            value={form.voterID}
+            value={form.voterId}
             onChange={handleChange}
             required
           />

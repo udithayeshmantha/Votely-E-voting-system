@@ -1,11 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/Authcontext';
 import Logo from '../assets/logo.png';
 import Bg from "../assets/bg.jpg";
 import { handleApiCall } from '../api/handleApiCall';
-import axios from 'axios';
-import { MediaBluetoothOff } from '@mui/icons-material';
 import { useDispatch, useSelector } from 'react-redux';
 import { setUser } from '../redux/features/userSlice';
 
@@ -20,9 +18,11 @@ const SignIn = () => {
 
   const navigate = useNavigate();
   const { login } = useAuth();
-
   const dispatch = useDispatch();
-  
+
+  useEffect(() => {
+    console.log('Global state:', user);
+  }, [user]);
 
   const handleChange = (e) => {
     setForm({
@@ -32,39 +32,40 @@ const SignIn = () => {
   };
 
   const handleSubmit = async (e) => {
-    setLoading(true);
     e.preventDefault();
+    setLoading(true);
+    setError('');
 
-    // handle api call submit data 
     try {
       const response = await handleApiCall(
         'http://localhost:5000/api/users/login',
-        'post',
+        'POST',
         { 'Content-Type': 'application/json' },
         form
       );
 
-      console.log(response)
+      console.log('API Response:', response);
+
       if (response.status === 200) {
-        localStorage.setItem('token',response.data.token);
-        dispatch(setUser(
-          {
-            uid: response.data.uid,
-            email: response.data.email,
-            token: response.data.token,
-            role: response.data.role
-          }
-        ));
-        console.log(user);
+        localStorage.setItem('token', response.data.token);
+        dispatch(setUser({
+          uid: response.data.uid,
+          email: response.data.email,
+          token: response.data.token,
+          role: response.data.role
+        }));
+        localStorage.setItem("userId" , response.data.uid);
+        console.log('User after dispatch:', user);
         navigate('/dashboard');
       } else {
         setError('Invalid email or password');
       }
-    } catch (error) {
-      setError('An error occurred. Please try again.',error);
+    } catch (err) {
+      setError('An error occurred. Please try again.');
+      console.error('Error:', err);
+    } finally {
+      setLoading(false);
     }
-
-    setLoading(false);
   };
 
   return (
