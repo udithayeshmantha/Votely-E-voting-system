@@ -13,7 +13,7 @@ import {
 import Logo from "../../assets/logo.png";
 import userlogo from "../../assets/user.png";
 
-const AdminSidebar = () => {
+const Admin = () => {
   const location = useLocation();
   const isActive = (path) => location.pathname === path;
 
@@ -77,4 +77,4 @@ const AdminSidebar = () => {
   );
 };
 
-export default AdminSidebar;
+export default Admin;

@@ -5,15 +5,19 @@ import ElectionCard from "./ElectionCard";
 import ElectionTimeline from "./ElectionTimeline";
 import ResultsChart from "./ResultsChart";
 import StatsCard from "./StatsCard";
+import { useSelector } from "react-redux";
 
 const Index = () => {
+  const username  = useSelector((state) => state.user.firstname);  
+  const uid = useSelector((state) => state.user.uid);
+  
   return (
     <div className="flex h-screen w-full">
       <div className="flex-1 overflow-auto font-Poppins">
         <DashboardHeader />
         <main className="dashboard-gradient min-h-[calc(100vh-4rem)] px-20 py-6">
           <div className="mb-6">
-            <h1 className="text-3xl font-bold">Hello, Udith!</h1>
+            <h1 className="text-3xl font-bold">Hello, {username}</h1>
             <p className="text-muted-foreground">
               Welcome to Votely's Online Voting System
             </p>
