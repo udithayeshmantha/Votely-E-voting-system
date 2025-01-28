@@ -1,9 +1,10 @@
 import React from "react";
 import Landing from "../assets/landing.svg";
 import Bg from "../assets/bg.jpg";
-import Votingpana from '../assets/Voting-pana.png';
-import Securedatapana from '../assets/Secure data-pana.png';
-import RealtimeSyncpana from '../assets/Real-time Sync-pana.png';
+import Votingpana from "../assets/Voting-pana.png";
+import Securedatapana from "../assets/Secure data-pana.png";
+import RealtimeSyncpana from "../assets/Real-time Sync-pana.png";
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (
@@ -24,7 +25,9 @@ const Home = () => {
             secured voting session.
           </div>
           <button className="mt-6 px-6 py-3 bg-[#a81d74] text-white font-semibold rounded-lg shadow-md hover:bg-purple-900 transition duration-300 font-Poppins">
-            Get Started
+            <Link to="/signup" className="text-white">
+              Get Started
+            </Link>
           </button>
         </div>
         <div className=" mt-8 lg:mt-0 justify-items-center">
@@ -70,53 +73,71 @@ const Home = () => {
           <div className="font-extrabold text-2xl md:text-3xl lg:text-4xl font-Poppins">
             Make your decision-making process more modern, safe, and efficient.
           </div>
-          <div className="text-xl font-light
-           font-Poppins">
+          <div
+            className="text-xl font-light
+           font-Poppins"
+          >
             Upgrade from manual ballot counting to an online election system
             without jeopardizing the integrity of your vote.
           </div>
         </div>
       </div>
       <div className="text-center px-10">
-        <h1 className="text-4xl font-bold md:text-3xl lg:text-4xl mb-1 font-Poppins">Our Features</h1>
-        <p className="text-xl font-light mb-4 font-Poppins">We provide an online voting system that exceed expectations. from secure <br/>
-        polling software to the management of complex virtual voting events
+        <h1 className="text-4xl font-bold md:text-3xl lg:text-4xl mb-1 font-Poppins">
+          Our Features
+        </h1>
+        <p className="text-xl font-light mb-4 font-Poppins">
+          We provide an online voting system that exceed expectations. from
+          secure <br />
+          polling software to the management of complex virtual voting events
         </p>
       </div>
-      
+
       <div className="flex flex-col lg:flex-row justify-around items-center px-8 pb-28 font-Poppins">
-
-      <div className="flex flex-col items-center text-center max-w-sm m-">
-        <div className="w-72 h-72 flex items-center justify-center rounded-full mb-4">
-          <img src={Securedatapana} alt="Secured Platform" className="w-72 h-72" />
+        <div className="flex flex-col items-center text-center max-w-sm m-">
+          <div className="w-72 h-72 flex items-center justify-center rounded-full mb-4">
+            <img
+              src={Securedatapana}
+              alt="Secured Platform"
+              className="w-72 h-72"
+            />
+          </div>
+          <h3 className="text-3xl font-bold text-gray-800">Secured Platform</h3>
+          <p className="text-xl text-gray-600 mt-2 font-light">
+            With our system, your data is secured
+          </p>
         </div>
-        <h3 className="text-3xl font-bold text-gray-800">Secured Platform</h3>
-        <p className="text-xl text-gray-600 mt-2 font-light">
-          With our system, your data is secured
-        </p>
-      </div>
 
-      <div className="flex flex-col items-center text-center max-w-sm m-">
-      <div className="flex items-center justify-center rounded-full mb-4 w-72 h-72 ">
-          <img src={Votingpana} alt="Secured Platform" className="w-72 h-72" />
+        <div className="flex flex-col items-center text-center max-w-sm m-">
+          <div className="flex items-center justify-center rounded-full mb-4 w-72 h-72 ">
+            <img
+              src={Votingpana}
+              alt="Secured Platform"
+              className="w-72 h-72"
+            />
+          </div>
+          <h3 className="text-3xl font-bold text-gray-800">Vote Online</h3>
+          <p className="text-xl text-gray-600 mt-2 font-light">
+            In just a few clicks, you can vote your preferred candidates
+          </p>
         </div>
-        <h3 className="text-3xl font-bold text-gray-800">Vote Online</h3>
-        <p className="text-xl text-gray-600 mt-2 font-light">
-          In just a few clicks, you can vote your preferred candidates
-        </p>
-      </div>
 
-      <div className="flex flex-col items-center text-center max-w-sm m-">
-      <div className="flex items-center justify-center rounded-full mb-4 w-72 h-72 ">
-          <img src={RealtimeSyncpana} alt="Secured Platform" className="w-72 h-72" />
+        <div className="flex flex-col items-center text-center max-w-sm m-">
+          <div className="flex items-center justify-center rounded-full mb-4 w-72 h-72 ">
+            <img
+              src={RealtimeSyncpana}
+              alt="Secured Platform"
+              className="w-72 h-72"
+            />
+          </div>
+          <h3 className="text-3xl font-bold text-gray-800">
+            Real-Time Results
+          </h3>
+          <p className="text-xl text-gray-600 mt-2 font-light">
+            View real-time voting results and scores of each candidate
+          </p>
         </div>
-        <h3 className="text-3xl font-bold text-gray-800">Real-Time Results</h3>
-        <p className="text-xl text-gray-600 mt-2 font-light">
-          View real-time voting results and scores of each candidate
-        </p>
       </div>
-    </div>
-
     </div>
   );
 };

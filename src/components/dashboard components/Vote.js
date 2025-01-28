@@ -12,9 +12,9 @@ const Vote = () => {
 
   const candidates = {
     president: [
-      { id: 1, name: 'Ranjith Dissanayake', role: 'System Development', image: '/path/to/image' },
-      { id: 2, name: 'Asela Gunarathne', role: 'Web Development', image: '/path/to/image' },
-      { id: 3, name: 'Uditha Gaweshana', role: 'Animation', image: '/path/to/image' }
+      { id: 1, name: 'Ranjith Dissanayake', image: '/path/to/image' },
+      { id: 2, name: 'Asela Gunarathne',  image: '/path/to/image' },
+      { id: 3, name: 'Uditha Gaweshana',  image: '/path/to/image' }
     ],
     vicePresident: [
       { id: 4, name: 'Kasey Rachel Flores', role: 'System Development', image: '/path/to/image' },
@@ -35,7 +35,7 @@ const Vote = () => {
   };
 
   const handleSubmit = () => {
-    if (!votes.president || !votes.vicePresident || !votes.secretary) {
+    if (!votes.president ) {
       alert('Please vote for all positions before submitting');
       return;
     }
