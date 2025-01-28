@@ -1,5 +1,12 @@
 import React from "react";
 import Bg from "../assets/bg.jpg";
+import udithImage from "../assets/members/udith.jpg"
+import lasaImage from "../assets/members/lasa.jpg"
+import prasithImage from "../assets/members/prasith.jpg"
+import kavinduImage from "../assets/members/kavindu.jpg"
+import miyumiImage from "../assets/members/miyumi.jpg"
+
+
 
 const AboutUs = () => {
   return (
@@ -99,27 +106,27 @@ const managementTeam = [
   {
     name: "Udith Ayeshmantha",
     position: "President",
-    image: "",
+    image: udithImage,
   },
   {
     name: "Lasantha Pradeep",
     position: "Vice President",
-    image: "",
+    image: lasaImage,
   },
   {
     name: "Prasith De Alwis",
     position: "Elections Director",
-    image: "",
+    image: prasithImage,
   },
   {
     name: "Kavindu Mihiran",
     position: "IT Director",
-    image: "",
+    image: kavinduImage,
   },
   {
     name: "Miyumi Nimsara",
     position: "IT Director",
-    image: "",
+    image: miyumiImage,
   },
 ];
 

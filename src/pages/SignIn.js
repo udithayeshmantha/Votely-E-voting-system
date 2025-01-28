@@ -58,7 +58,7 @@ const SignIn = () => {
         );
         localStorage.setItem("userId", response.data.uid);
         console.log("User after dispatch:", user);
-        navigate("/dashboard");
+        navigate("/index");
       } else {
         setError("Invalid email or password");
       }

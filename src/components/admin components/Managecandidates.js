@@ -42,7 +42,6 @@ const ManageCandidates = () => {
         setLoading(false);
       } catch (err) {
         console.error("Error fetching candidates:", err);
-        setError("Failed to fetch candidates.");
         setLoading(false);
       }
     };

@@ -12,11 +12,9 @@ const Vote = () => {
 
   const candidates = {
     president: [
-      { id: 1, name: 'Felisa Monteverde',  image: '/path/to/image' },
-      { id: 2, name: 'Emma Ainsley Zamora', image: '/path/to/image' },
-      { id: 3, name: 'Lorenzo Agustin', image: '/path/to/image' },
-      { id: 4, name: 'Lorenzo Agustin', image: '/path/to/image' },
-      { id: 5, name: 'Lorenzo Agustin', image: '/path/to/image' }
+      { id: 1, name: 'Ranjith Dissanayake', role: 'System Development', image: '/path/to/image' },
+      { id: 2, name: 'Asela Gunarathne', role: 'Web Development', image: '/path/to/image' },
+      { id: 3, name: 'Uditha Gaweshana', role: 'Animation', image: '/path/to/image' }
     ],
     vicePresident: [
       { id: 4, name: 'Kasey Rachel Flores', role: 'System Development', image: '/path/to/image' },

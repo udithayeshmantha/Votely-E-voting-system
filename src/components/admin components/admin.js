@@ -24,7 +24,7 @@ const Admin = () => {
     { icon: UserPlus, label: "Add New User", path: "/admin/add-user" },
     { icon: ClipboardList, label: "Manage Candidates", path: "/admin/candidates" },
    // { icon: BarChart, label: "Results & Analytics", path: "/admin/results" },
-    { icon: Settings, label: "Admin Settings", path: "/admin/settings" },
+    // { icon: Settings, label: "Admin Settings", path: "/admin/settings" },
   ];
 
   const handleLogout = () => {
