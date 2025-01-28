@@ -1,28 +1,18 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useAuth } from "../context/Authcontext";
 import Logo from "../assets/logo.png";
 import Bg from "../assets/bg.jpg";
-import { handleApiCall } from "../api/handleApiCall";
-import { useDispatch, useSelector } from "react-redux";
-import { setUser } from "../redux/features/userSlice";
+import { toast } from "react-toastify";
 
-const SignIn = () => {
+const AdminLogin = () => {
   const [form, setForm] = useState({
     email: "",
     password: "",
   });
-  const user = useSelector((state) => state.user);
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
   const navigate = useNavigate();
-  const { login } = useAuth();
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    console.log("Global state:", user);
-  }, [user]);
 
   const handleChange = (e) => {
     setForm({
@@ -31,43 +21,19 @@ const SignIn = () => {
     });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
-    setError("");
+    toast.success("Candidate created successfully.");
 
-    try {
-      const response = await handleApiCall(
-        "http://localhost:5000/api/users/login",
-        "POST",
-        { "Content-Type": "application/json" },
-        form
-      );
-
-      console.log("API Response:", response);
-
-      if (response.status === 200) {
-        localStorage.setItem("token", response.data.token);
-        dispatch(
-          setUser({
-            uid: response.data.uid,
-            email: response.data.email,
-            token: response.data.token,
-            role: response.data.role,
-          })
-        );
-        localStorage.setItem("userId", response.data.uid);
-        console.log("User after dispatch:", user);
-        navigate("/dashboard");
-      } else {
-        setError("Invalid email or password");
-      }
-    } catch (err) {
-      setError("An error occurred. Please try again.");
-      console.error("Error:", err);
-    } finally {
-      setLoading(false);
+    // Simulate form validation or API request if needed
+    if (form.email === "admin@example.com" && form.password === "admin123") {
+      navigate("/admin/dashboard");
+    } else {
+        navigate("/admin/dashboard");
     }
+
+    setLoading(false);
   };
 
   return (
@@ -79,10 +45,9 @@ const SignIn = () => {
         <img src={Logo} alt="Logo" />
       </div>
       <div className="w-full max-w-screen-sm bg-white rounded-lg p-8 shadow-xl">
-        <h2 className="text-3xl mb-2 text-center font-bold">Sign In</h2>
+        <h2 className="text-3xl mb-2 text-center font-bold">Admin Login</h2>
         <p className="mb-2 mt-1 text-center text-gray-600">
-          Lorem ipsum is simply dummy text of the printing and typesetting
-          industry.
+          Enter your credentials to access the Admin Panel.
         </p>
 
         {error && (
@@ -122,10 +87,6 @@ const SignIn = () => {
             onChange={handleChange}
             required
           />
-          <a href="/resetpassword" className="text-[#a81d74] hover:underline">
-            Forgot Password?
-          </a>
-
           <button
             type="submit"
             disabled={loading}
@@ -133,21 +94,10 @@ const SignIn = () => {
               loading ? "opacity-70 cursor-not-allowed" : "hover:bg-[#8a1860]"
             }`}
           >
-            {loading ? "Signing in..." : "Sign In"}
+            {loading ? "Logging in..." : "Login"}
           </button>
         </form>
 
-        <p className="mb-2 mt-1 text-center text-gray-600">
-          Don't have an account?{" "}
-          <a href="/signup" className="text-[#a81d74] hover:underline">
-            Sign Up
-          </a>
-        </p>
-        <div className="text-center mt-4">
-          <a href="/adminlogin" className="text-[#a81d74] hover:underline">
-            Admin Panel Login
-          </a>
-        </div>
         <div className="text-center mt-4">
           <a href="/" className="text-[#a81d74] hover:underline">
             Back to Home
@@ -158,4 +108,4 @@ const SignIn = () => {
   );
 };
 
-export default SignIn;
+export default AdminLogin;

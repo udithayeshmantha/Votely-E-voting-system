@@ -1,11 +1,12 @@
 import React from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Home, Vote, FileText, Settings, LogOut } from "lucide-react";
 import Logo from "../../assets/logo.png";
 import userlogo from "../../assets/user.png";
 
 const Sidebar = () => {
   const location = useLocation();
+  const navigate = useNavigate();
   const isActive = (path) => location.pathname === path;
 
   const menuItems = [
@@ -15,8 +16,13 @@ const Sidebar = () => {
     { icon: Settings, label: "Settings", path: "/settings" },
   ];
 
+  const handleLogout = () => {
+    // Perform any logout logic here
+    navigate("/");
+  };
+
   return (
-    <div className="h-screen  bg-neutral-300 border-r border-gray-200 flex flex-col  font-Poppins w-20 md:w-max">
+    <div className="h-screen bg-neutral-300 border-r border-gray-200 flex flex-col font-Poppins w-20 md:w-max">
       <div className="p-6 flex flex-col gap-6">
         <div className="md:flex justify-start gap-2 mb-8 hidden">
           <Link to="/">
@@ -24,7 +30,7 @@ const Sidebar = () => {
           </Link>
         </div>
 
-        <div className=" flex-col justify-center items-center mb-8 hidden md:flex ">
+        <div className="flex-col justify-center items-center mb-8 hidden md:flex">
           <div className="w-20 h-20 rounded-full mb-3">
             <img
               src={userlogo}
@@ -43,8 +49,8 @@ const Sidebar = () => {
             <Link
               key={item.path}
               to={item.path}
-              className={`flex items-center gap-3  py-3 rounded-lg transition-colors ${
-                isActive(item.path) ? "text-white" : "text-black "
+              className={`flex items-center gap-3 py-3 rounded-lg transition-colors ${
+                isActive(item.path) ? "text-white" : "text-black"
               }`}
             >
               <item.icon size={20} />
@@ -57,7 +63,10 @@ const Sidebar = () => {
       </div>
 
       <div className="mt-auto p-6">
-        <button className="flex items-center gap-3 text-gray-600 hover:text-votely-primary transition-colors w-full">
+        <button
+          onClick={handleLogout}
+          className="flex items-center gap-3 text-gray-600 hover:text-votely-primary transition-colors w-full"
+        >
           <LogOut size={20} />
           <span className="hidden md:inline">Log out</span>
         </button>

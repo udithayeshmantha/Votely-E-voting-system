@@ -26,9 +26,7 @@ const CandidateCard = ({ name, role, image, isSelected, onVote }) => {
           >
             VOTE
           </button>
-          <button className="flex-1 py-2 px-4 rounded-md text-sm font-medium border border-gray-200 hover:bg-gray-50 transition-colors">
-            View Details
-          </button>
+          
         </div>
       </div>
     </div>
