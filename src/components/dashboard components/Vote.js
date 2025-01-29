@@ -1,5 +1,10 @@
 import React, { useState } from 'react';
 import CandidateCard from './CandidateCard';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import c1Image from './assets/c1.jpg';
+import c2Image from './assets/c2.jpg';
+import c3Image from './assets/c3.jpg';
 
 const Vote = () => {
   const [votes, setVotes] = useState({
@@ -10,19 +15,19 @@ const Vote = () => {
 
   const candidates = {
     president: [
-      { id: 1, name: 'Felisa Monteverde', role: 'System Development', image: '/path/to/image' },
-      { id: 2, name: 'Emma Ainsley Zamora', role: 'Web Development', image: '/path/to/image' },
-      { id: 3, name: 'Lorenzo Agustin', role: 'Animation', image: '/path/to/image' }
+      { id: 1, name: 'Ranjith Dissanayake', image: c1Image },
+      { id: 2, name: 'Asela Gunarathne',  image: c2Image },
+      { id: 3, name: 'Uditha Gaweshana',  image: c3Image }
     ],
-    vicePresident: [
-      { id: 4, name: 'Kasey Rachel Flores', role: 'System Development', image: '/path/to/image' },
-      { id: 5, name: 'Carolina Labasan', role: 'Web Development', image: '/path/to/image' },
-      { id: 6, name: 'Meagan Catubig', role: 'Animation', image: '/path/to/image' }
-    ],
-    secretary: [
-      { id: 7, name: 'Elie Cojuangco', role: 'System Development', image: '/path/to/image' },
-      { id: 8, name: 'Claudio Lucio Tejada', role: 'Web Development', image: '/path/to/image' }
-    ]
+    // vicePresident: [
+    //   { id: 4, name: 'Kasey Rachel Flores', role: 'System Development', image: '/path/to/image' },
+    //   { id: 5, name: 'Carolina Labasan', role: 'Web Development', image: '/path/to/image' },
+    //   { id: 6, name: 'Meagan Catubig', role: 'Animation', image: '/path/to/image' }
+    // ],
+    // secretary: [
+    //   { id: 7, name: 'Elie Cojuangco', role: 'System Development', image: '/path/to/image' },
+    //   { id: 8, name: 'Claudio Lucio Tejada', role: 'Web Development', image: '/path/to/image' }
+    // ]
   };
 
   const handleVote = (position, candidateId) => {
@@ -33,18 +38,19 @@ const Vote = () => {
   };
 
   const handleSubmit = () => {
-    if (!votes.president || !votes.vicePresident || !votes.secretary) {
+    if (!votes.president ) {
       alert('Please vote for all positions before submitting');
       return;
     }
     
     // Here you would typically send the votes to your backend
     console.log('Votes submitted:', votes);
-    alert('Thank you for voting!');
+    toast.success('Thank you for voting!');
   };
 
   return (
     <div className="flex-1 overflow-auto py-10 px-20 font-Poppins">
+      <ToastContainer />
       <h1 className="text-3xl font-bold mb-8 text-left">YOU MAY NOW CAST YOUR VOTES!</h1>
 
       {/* President Section */}
@@ -64,7 +70,7 @@ const Vote = () => {
       </section>
 
       {/* Vice President Section */}
-      <section className="mb-12">
+      {/* <section className="mb-12">
         <h2 className="text-xl font-semibold mb-4">Vice President Student Council</h2>
         <p className="text-sm text-gray-600 mb-4">You can only vote for one candidate</p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -77,10 +83,10 @@ const Vote = () => {
             />
           ))}
         </div>
-      </section>
+      </section> */}
 
       {/* Secretary Section */}
-      <section className="mb-12">
+      {/* <section className="mb-12">
         <h2 className="text-xl font-semibold mb-4">Secretary Student Council</h2>
         <p className="text-sm text-gray-600 mb-4">You can only vote for one candidate</p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -93,13 +99,12 @@ const Vote = () => {
             />
           ))}
         </div>
-      </section>
+      </section> */}
 
       <div className="text-center mt-8">
-        <p className="text-red-500 text-sm mb-4">Double check your choices before submitting your votes.</p>
         <button
           onClick={handleSubmit}
-          className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+          className="bg-[#a81d74] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#9c1a6c]  transition-colors"
         >
           SUBMIT VOTE
         </button>

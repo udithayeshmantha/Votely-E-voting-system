@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import {
   Home,
   Users,
@@ -15,16 +15,22 @@ import userlogo from "../../assets/user.png";
 
 const Admin = () => {
   const location = useLocation();
+  const navigate = useNavigate();
   const isActive = (path) => location.pathname === path;
 
   const menuItems = [
-    { icon: Home, label: "Dashboard", path: "/admin/dashboard" },
-    { icon: Users, label: "Manage Users", path: "/admin/users" },
+    // { icon: Home, label: "Dashboard", path: "/admin/dashboard" },
+    // { icon: Users, label: "Manage Users", path: "/admin/users" },
     { icon: UserPlus, label: "Add New User", path: "/admin/add-user" },
     { icon: ClipboardList, label: "Manage Candidates", path: "/admin/candidates" },
-    { icon: BarChart, label: "Results & Analytics", path: "/admin/results" },
-    { icon: Settings, label: "Admin Settings", path: "/admin/settings" },
+   // { icon: BarChart, label: "Results & Analytics", path: "/admin/results" },
+    // { icon: Settings, label: "Admin Settings", path: "/admin/settings" },
   ];
+
+  const handleLogout = () => {
+    // Perform any logout logic here
+    navigate("/");
+  };
 
   return (
     <div className="h-screen bg-neutral-300 border-r border-gray-200 flex flex-col font-Poppins w-20 md:w-max">
@@ -68,7 +74,10 @@ const Admin = () => {
       </div>
 
       <div className="mt-auto p-6">
-        <button className="flex items-center gap-3 text-gray-600 hover:text-votely-primary transition-colors w-full">
+        <button
+          onClick={handleLogout}
+          className="flex items-center gap-3 text-gray-600 hover:text-votely-primary transition-colors w-full"
+        >
           <LogOut size={20} />
           <span className="hidden md:inline">Log out</span>
         </button>

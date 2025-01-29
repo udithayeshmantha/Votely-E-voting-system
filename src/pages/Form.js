@@ -60,7 +60,7 @@ const Form = () => {
       toast.error("failed" + error);
     }
     toast.success("User form created..!")
-    navigate('/dashboard');
+    navigate('/index');
   };
 
   const provinces = [

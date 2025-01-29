@@ -11,11 +11,10 @@ import {
 
 // Data for the chart
 const data = [
-  { name: "C1", votes: 120 },
-  { name: "C2", votes: 150 },
-  { name: "C3", votes: 90 },
-  { name: "C4", votes: 90 },
-  { name: "C5", votes: 90 },
+  { name: "Ranjith Dissanayake", votes: 120 },
+  { name: "Asela Gunarathne", votes: 150 },
+  { name: "Uditha Gaweshana", votes: 90 },
+
 ];
 
 const colors = ["#8884d8", "#82ca9d", "#ffc658"];
