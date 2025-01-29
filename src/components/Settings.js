@@ -28,34 +28,34 @@ const Settings = () => {
           <div className="space-y-4">
             <button className="w-full flex items-center justify-between p-4 bg-white rounded-lg shadow hover:bg-gray-50">
               <span className="flex items-center">
-                <FaUser className="text-blue-600 mr-3" />
+                <FaUser className="text-[#a81d74] mr-3" />
                 Edit Profile
               </span>
               
             </button>
             <button className="w-full flex items-center justify-between p-4 bg-white rounded-lg shadow hover:bg-gray-50">
               <span className="flex items-center">
-                <FaLock className="text-blue-600 mr-3" />
+                <FaLock className="text-[#a81d74] mr-3" />
                 Change Password
               </span>
               
             </button>
             <button className="w-full flex items-center justify-between p-4 bg-white rounded-lg shadow hover:bg-gray-50">
               <span className="flex items-center">
-                <FaGlobe className="text-blue-600 mr-3" />
+                <FaGlobe className="text-[#a81d74] mr-3" />
                 Language
               </span>
               <span className="text-gray-500">English</span>
             </button>
             <div className="w-full flex items-center justify-between p-4 bg-white rounded-lg shadow">
               <span className="flex items-center">
-                <FaBell className="text-blue-600 mr-3" />
+                <FaBell className="text-[#a81d74] mr-3" />
                 Notification
               </span>
               <button
                 onClick={toggleNotifications}
                 className={`w-10 h-6 rounded-full flex items-center px-1 ${
-                  notificationsEnabled ? "bg-blue-600" : "bg-gray-300"
+                  notificationsEnabled ? "bg-[#a81d74]" : "bg-gray-300"
                 }`}
               >
                 <span
@@ -74,28 +74,28 @@ const Settings = () => {
           <div className="space-y-4">
             <button className="w-full flex items-center justify-between p-4 bg-white rounded-lg shadow hover:bg-gray-50">
               <span className="flex items-center">
-                <FaInfoCircle className="text-blue-600 mr-3" />
+                <FaInfoCircle className="text-[#a81d74] mr-3" />
                 About Us
               </span>
               
             </button>
             <button className="w-full flex items-center justify-between p-4 bg-white rounded-lg shadow hover:bg-gray-50">
               <span className="flex items-center">
-                <FaFileAlt className="text-blue-600 mr-3" />
+                <FaFileAlt className="text-[#a81d74] mr-3" />
                 Terms of Service
               </span>
               
             </button>
             <button className="w-full flex items-center justify-between p-4 bg-white rounded-lg shadow hover:bg-gray-50">
               <span className="flex items-center">
-                <FaShieldAlt className="text-blue-600 mr-3" />
+                <FaShieldAlt className="text-[#a81d74] mr-3" />
                 Privacy Policy
               </span>
               
             </button>
             <button className="w-full flex items-center justify-between p-4 bg-white rounded-lg shadow hover:bg-gray-50">
               <span className="flex items-center">
-                <FaPhone className="text-blue-600 mr-3" />
+                <FaPhone className="text-[#a81d74] mr-3" />
                 Contact Us
               </span>
               

@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import CandidateCard from './CandidateCard';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import c1Image from './assets/c1.jpg';
+import c2Image from './assets/c2.jpg';
+import c3Image from './assets/c3.jpg';
 
 const Vote = () => {
   const [votes, setVotes] = useState({
@@ -12,19 +15,19 @@ const Vote = () => {
 
   const candidates = {
     president: [
-      { id: 1, name: 'Ranjith Dissanayake', image: '/path/to/image' },
-      { id: 2, name: 'Asela Gunarathne',  image: '/path/to/image' },
-      { id: 3, name: 'Uditha Gaweshana',  image: '/path/to/image' }
+      { id: 1, name: 'Ranjith Dissanayake', image: c1Image },
+      { id: 2, name: 'Asela Gunarathne',  image: c2Image },
+      { id: 3, name: 'Uditha Gaweshana',  image: c3Image }
     ],
-    vicePresident: [
-      { id: 4, name: 'Kasey Rachel Flores', role: 'System Development', image: '/path/to/image' },
-      { id: 5, name: 'Carolina Labasan', role: 'Web Development', image: '/path/to/image' },
-      { id: 6, name: 'Meagan Catubig', role: 'Animation', image: '/path/to/image' }
-    ],
-    secretary: [
-      { id: 7, name: 'Elie Cojuangco', role: 'System Development', image: '/path/to/image' },
-      { id: 8, name: 'Claudio Lucio Tejada', role: 'Web Development', image: '/path/to/image' }
-    ]
+    // vicePresident: [
+    //   { id: 4, name: 'Kasey Rachel Flores', role: 'System Development', image: '/path/to/image' },
+    //   { id: 5, name: 'Carolina Labasan', role: 'Web Development', image: '/path/to/image' },
+    //   { id: 6, name: 'Meagan Catubig', role: 'Animation', image: '/path/to/image' }
+    // ],
+    // secretary: [
+    //   { id: 7, name: 'Elie Cojuangco', role: 'System Development', image: '/path/to/image' },
+    //   { id: 8, name: 'Claudio Lucio Tejada', role: 'Web Development', image: '/path/to/image' }
+    // ]
   };
 
   const handleVote = (position, candidateId) => {
@@ -101,7 +104,7 @@ const Vote = () => {
       <div className="text-center mt-8">
         <button
           onClick={handleSubmit}
-          className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+          className="bg-[#a81d74] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#9c1a6c]  transition-colors"
         >
           SUBMIT VOTE
         </button>
